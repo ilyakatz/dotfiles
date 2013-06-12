@@ -5,25 +5,7 @@ export PATH="/usr/local/bin:/usr/local/mysql/bin:$PATH"
 
 ssh-add
 
-# http://railstips.org/blog/archives/2009/02/02/bedazzle-your-bash-prompt-with-git-info/
-function parse_git_branch {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "("${ref#refs/heads/}")"
-}
-
-RED="\[\033[0;31m\]"
-YELLOW="\[\033[0;33m\]"
-GREEN="\[\033[0;32m\]"
-BLACK="\[\033[0;30m\]"
-
-#$RED\$(date +%H:%M) 
-PS1="\w$YELLOW \$(parse_git_branch)$GREEN\$ $BLACK"
-
-
-#git bash completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
+source ~/.git_profile
 
 [[ -s "/Users/ilyakatz/.rvm/scripts/rvm" ]] && source "/Users/ilyakatz/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 alias wget="curl -O"
