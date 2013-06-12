@@ -1,0 +1,48 @@
+[user]
+	name = Ilya Katz
+	email = ilyakatz@gmail.com
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = /Users/ilyakatz/.gitignore_global
+        quotepath = false
+[help]
+        autocorrect = 1
+[url "https://github.com/"]
+        insteadOf = "gh:"
+[color]
+        ui = 1
+[alias]
+	ci = commit
+	co = checkout
+	ignore = update-index --assume-unchanged
+	unignore = update-index --no-assume-unchanged
+
+[push]
+        default = current
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+# https://raw.github.com/mathiasbynens/dotfiles
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow 
+	frag = magenta
+	old = red 
+	new = green 
+[color "status"]
+	added = green
+	changed = red
+	untracked = cyan
+
+[apply]
+	# Detect whitespace errors when applying a patch
+	whitespace = fix
+
