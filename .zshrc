@@ -46,6 +46,6 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.aliases
 
-
+set -o vi
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/opt/local/bin:/opt/local/sbin:/Users/ilyakatz/.rvm/gems/ruby-1.9.3-p392@platform-3.2/bin:/Users/ilyakatz/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/ilyakatz/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/ilyakatz/.rvm/bin:/usr/local/mysql/bin:/Users/ilyakatz/.rvm/bin
