@@ -1,4 +1,12 @@
+"installation
+" ~/.vim/bundle
+"cd ~/.vim/bundle
+"git clone https://github.com/scrooloose/nerdtree.git
+"git clone git://github.com/tpope/vim-bundler.git
+"git clone git://github.com/tpope/vim-fugitive.git
 "git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundleck
+"git clone git://github.com/tpope/vim-rails.git
+"git clone git://github.com/tpope/vim-sensible.git
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -10,6 +18,7 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'tpope/vim-rails.git'
 Bundle 'mileszs/ack.vim.git'
+Bundle 'mscrooloose/nerdtree.git'
 
 execute pathogen#infect()
 syntax on

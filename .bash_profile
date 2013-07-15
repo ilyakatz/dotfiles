@@ -19,4 +19,4 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # https://github.com/pahen/dotfiles
 source ~/.completions
 
-set -o vi
+#set -o vi
