@@ -4,7 +4,7 @@
 "git clone https://github.com/scrooloose/nerdtree.git
 "git clone git://github.com/tpope/vim-bundler.git
 "git clone git://github.com/tpope/vim-fugitive.git
-"git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundleck
+"git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 "git clone git://github.com/tpope/vim-rails.git
 "git clone git://github.com/tpope/vim-sensible.git
 
