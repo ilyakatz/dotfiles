@@ -1,3 +1,16 @@
+"git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundleck
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+"  " required!
+Bundle 'gmarik/vundle'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+Bundle 'tpope/vim-rails.git'
+Bundle 'mileszs/ack.vim.git'
+
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -78,3 +91,23 @@ nnoremap <del> <right>
 
 "Mappings"
 map <F2> :NERDTree<CR>
+
+set noerrorbells                  " no beeping please
+
+set backup                        " save backups
+set backupdir=$HOME/.vim/tmp      " keep backup files in one location
+set noswapfile                    " don't use swp files
+
+" gist-vim
+let g:gist_open_browser_after_post = 1
+let g:gist_detect_filetype = 1
+
+" custom syntax highlighting
+au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
+
+" auto strip whitespace when saving
+autocmd BufWritePre * :%s/\s\+$//e
+
+" indent the whole file
+map <silent> <F5> mmgg=G'm
+imap <silent> <F5> <Esc> mmgg=G'm
