@@ -16,6 +16,8 @@ alias bes='be spork'
 alias besc='bes cucumber'
 alias besr='bes rspec'
 
+alias cuc='spring cucumber'
+
 #rails
 alias rc="rails c"
 
