@@ -10,6 +10,7 @@ source ~/.git_profile
 [[ -s "/Users/ilyakatz/.rvm/scripts/rvm" ]] && source "/Users/ilyakatz/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 alias wget="curl -O"
 
+echo "sourcing aliaes"
 source ~/.aliases
 
 # MacPorts Installer addition on 2012-02-22_at_11:05:20: adding an appropriate PATH variable for use with MacPorts.
