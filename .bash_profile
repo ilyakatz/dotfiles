@@ -8,7 +8,9 @@ ssh-add
 source ~/.git_profile
 
 [[ -s "/Users/ilyakatz/.rvm/scripts/rvm" ]] && source "/Users/ilyakatz/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-alias wget="curl -O"
+if [ `uname` != "Linux" ]; then
+  alias wget="curl -O"
+fi
 
 source ~/.aliases
 
@@ -19,4 +21,4 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # https://github.com/pahen/dotfiles
 source ~/.completions
 
-#set -o vi
+set -o vi

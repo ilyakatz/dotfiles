@@ -7,6 +7,7 @@
 "git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 "git clone git://github.com/tpope/vim-rails.git
 "git clone git://github.com/tpope/vim-sensible.git
+"git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundleck
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -18,7 +19,6 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'tpope/vim-rails.git'
 Bundle 'mileszs/ack.vim.git'
-Bundle 'mscrooloose/nerdtree.git'
 
 execute pathogen#infect()
 syntax on
@@ -37,7 +37,7 @@ set number "Show line numbers"
 filetype plugin indent on "Automatic indentation based on filetype"
 let &t_Co=256 "256 colors in the terminal"
 set cursorline "Highlight the current line"
-set mouse=a "Mouse support"
+"set mouse=a "Mouse support"
 Helptags
 set hidden "Allow switching from unsaved buffers"
 set confirm "Confirmation dialog instead of fail on unwritten buffers"
@@ -103,9 +103,9 @@ map <F2> :NERDTree<CR>
 
 set noerrorbells                  " no beeping please
 
-set backup                        " save backups
-set backupdir=$HOME/.vim/tmp      " keep backup files in one location
-set noswapfile                    " don't use swp files
+"set backup                        " save backups
+"set backupdir=$HOME/.vim/tmp      " keep backup files in one location
+"set noswapfile                    " don't use swp files
 
 " gist-vim
 let g:gist_open_browser_after_post = 1
@@ -115,7 +115,7 @@ let g:gist_detect_filetype = 1
 au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
 
 " auto strip whitespace when saving
-autocmd BufWritePre * :%s/\s\+$//e
+"autocmd BufWritePre * :%s/\s\+$//e
 
 " indent the whole file
 map <silent> <F5> mmgg=G'm
