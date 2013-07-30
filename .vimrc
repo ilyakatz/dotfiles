@@ -7,7 +7,6 @@
 "git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 "git clone git://github.com/tpope/vim-rails.git
 "git clone git://github.com/tpope/vim-sensible.git
-"git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundleck
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -19,6 +18,8 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'tpope/vim-rails.git'
 Bundle 'mileszs/ack.vim.git'
+Bundle 'mscrooloose/nerdtree.git'
+Bundle 'vim-scripts/ruby-matchit'
 
 execute pathogen#infect()
 syntax on
@@ -115,8 +116,83 @@ let g:gist_detect_filetype = 1
 au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
 
 " auto strip whitespace when saving
-"autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e
 
 " indent the whole file
 map <silent> <F5> mmgg=G'm
 imap <silent> <F5> <Esc> mmgg=G'm
+
+" Get rid of the delay when hitting esc!
+set noesckeys
+
+" Make the omnicomplete text readable
+:highlight PmenuSel ctermfg=black
+
+command! W w " Bind :W to :w
+command! Q q " Bind :Q to :q
+command! Qall qall
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Test-running stuff
+" https://github.com/r00k/dotfiles/blob/master/vimrc
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! RunCurrentTest()
+  let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\|_test.rb\)$') != -1
+  if in_test_file
+    call SetTestFile()
+
+    if match(expand('%'), '\.feature$') != -1
+      call SetTestRunner("!bin/cucumber")
+      exec g:bjo_test_runner g:bjo_test_file
+    elseif match(expand('%'), '_spec\.rb$') != -1
+      call SetTestRunner("! rspec")
+      xec g:bjo_test_runner g:bjo_test_file
+    else
+      call SetTestRunner("!ruby -Itest")
+      exec g:bjo_test_runner g:bjo_test_file
+    endif
+  else
+    exec g:bjo_test_runner g:bjo_test_file
+  endif
+endfunction
+
+function! SetTestRunner(runner)
+  let g:bjo_test_runner=a:runner
+endfunction
+
+function! RunCurrentLineInTest()
+  let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\|_test.rb\)$') != -1
+  if in_test_file
+    call SetTestFileWithLine()
+  end
+
+  exec "!bin/rspec" g:bjo_test_file . ":" . g:bjo_test_file_line
+endfunction
+
+function! SetTestFile()
+  let g:bjo_test_file=@%
+endfunction
+
+function! SetTestFileWithLine()
+  let g:bjo_test_file=@%
+  let g:bjo_test_file_line=line(".")
+endfunction
+
+map <Leader>t :w<cr>:call RunCurrentTest()<CR>
+map <Leader>cc :!cucumber --drb %<CR>
+map <Leader>bb :!bundle install<cr>
+
+"" Git
+map <Leader>gs :Gstatus<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
+
+"To define a mapping which uses the mapleader variable, the special string
+"<Leader>" can be used.  It is replaced with the string value of mapleader.
+"If mapleader is not set or empty, a backslash is used instead.
+"Example:
+"    :map <Leader>A  oanother line <Esc>
+"Works like:
+"    :map \A  oanother line <Esc>
