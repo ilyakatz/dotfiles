@@ -1,4 +1,4 @@
-alias gist='nocorrect gist'
+alias gist='nocorrect gist'j
 alias gitl='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an, %cr)%Creset'\'' --abbrev-commit --date=relative'
 alias gitls='gitl --max-count=5'
 alias grm='git ls-files --deleted | xargs git rm'
@@ -15,11 +15,11 @@ alias ber='be rspec'
 alias bes='be spork'
 alias besc='bes cucumber'
 alias besr='bes rspec'
-
 alias cuc='spring cucumber'
 
 #rails
 alias rc="rails c"
+alias sidekiq="bundle exec sidekiq -q low"
 
 #https://github.com/challengepost/platform/wiki/Setup-Jenkins-CLI
 alias jbuild='cd ~/ws/platform && build/schedule_build.sh -s >& /dev/null & '
