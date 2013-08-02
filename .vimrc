@@ -20,16 +20,23 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'mileszs/ack.vim.git'
 Bundle 'mscrooloose/nerdtree.git'
 Bundle 'vim-scripts/ruby-matchit'
+Bundle 'kien/ctrlp.vim'
+Bundle 'jistr/vim-nerdtree-tabs'
 
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
 "Basic settings"
-set nocompatible "Apparently this is a good idea."
+set nocompatible "Apparently this is a good idea.
 syntax on "Syntax Highlighting"
-set history=300 "300 lines of history"
-set backspace=indent,eol,start "Backspace over autoindent, line breaks, and the start of insert"
+filetype on
+filetype indent on
+filetype plugin on
+filetype plugin indent on
+
+set history=300 "300 lines of history
+set backspace=indent,eol,start "Backspace over autoindent, line breaks, and the start of insert
 set ruler "Show the ruler"
 set virtualedit=onemore "Allows cursor placement over the line's end in normal mode"
 set pastetoggle=<F2> "F2 enters paste mode in Insert mode"
@@ -38,7 +45,7 @@ set number "Show line numbers"
 filetype plugin indent on "Automatic indentation based on filetype"
 let &t_Co=256 "256 colors in the terminal"
 set cursorline "Highlight the current line"
-"set mouse=a "Mouse support"
+set mouse=a "Mouse support"
 Helptags
 set hidden "Allow switching from unsaved buffers"
 set confirm "Confirmation dialog instead of fail on unwritten buffers"
@@ -88,19 +95,10 @@ vnoremap > >gv
 vnoremap = =gv
 "gv reselects the previous selection"
 
-"Shift-tab reverse-indenting"
-nnoremap <S-Tab> <<
-inoremap <S-Tab> <Esc><<i
-vnoremap <S-Tab> <gv
-vnoremap < <gv
-"gv reselects the previous selection"
+"Shift-tab reverse-indenting" nnoremap <S-Tab> << inoremap <S-Tab> <Esc><<i vnoremap <S-Tab> <gv vnoremap < <gv "gv reselects the previous selection"
 
 "Delete key no longer deletes in normal mode"
 nnoremap <del> <right>
-
-
-"Mappings"
-map <F2> :NERDTree<CR>
 
 set noerrorbells                  " no beeping please
 
@@ -196,3 +194,8 @@ nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
 "    :map <Leader>A  oanother line <Esc>
 "Works like:
 "    :map \A  oanother line <Esc>
+
+
+""""""""""""""" File navigation"""""""""""""""
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+map <F2> :NERDTree<CR>
