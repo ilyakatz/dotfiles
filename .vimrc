@@ -23,6 +23,7 @@ Bundle 'vim-scripts/ruby-matchit'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'skwp/vim-rspec'
 
 execute pathogen#infect()
 syntax on
