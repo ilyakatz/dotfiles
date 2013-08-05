@@ -24,6 +24,14 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'skwp/vim-rspec'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/syntastic'
+"Bundle 'Valloric/YouCompleteMe'
+Bundle 'altercation/vim-colors-solarized'
+
+"Bundle 'Shougo/neocomplcache.vim'
+"Bundle 'ujihisa/neco-ruby'
 
 execute pathogen#infect()
 syntax on
@@ -201,3 +209,15 @@ nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
 """"""""""""""" File navigation"""""""""""""""
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 map <F2> :NERDTree<CR>
+"map  <C-]> :tabn<CR> "next tab
+"map  <C-[> :tabp<CR> "previous tab
+
+"""""""""""""" Colors """"""""""""""""""
+if has('gui_running')
+  syntax enable
+  set background=light
+  colorscheme solarized
+endif
+
+
+let g:neocomplcache_enable_at_startup = 1
