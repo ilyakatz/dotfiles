@@ -28,7 +28,7 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
-"Bundle 'tpope/vim-rvm'
+Bundle 'tpope/vim-rvm'
 
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
@@ -225,3 +225,20 @@ endif
 
 
 let g:neocomplcache_enable_at_startup = 1
+
+:autocmd BufEnter * Rvm
+
+if has('statusline')
+  set laststatus=2
+  " Broken down into easily includeable segments
+  set statusline=%<%f\    " Filename
+  set statusline+=%w%h%m%r " Options
+  "  set statusline+=%{fugitive#statusline()} "  Git Hotness
+  set statusline+=\ [%{getcwd()}]          " current dir
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+  let g:syntastic_enable_signs=1
+  set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+  set statusline+=%{rvm#statusline()}
+endif
