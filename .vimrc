@@ -188,9 +188,9 @@ function! SetTestFileWithLine()
   let g:bjo_test_file_line=line(".")
 endfunction
 
-map <Leader>t :w<cr>:call RunCurrentTest()<CR>
-map <Leader>cc :!cucumber --drb %<CR>
-map <Leader>bb :!bundle install<cr>
+"map <Leader>t :w<cr>:call RunCurrentTest()<CR>
+"map <Leader>cc :!cucumber --drb %<CR>
+"map <Leader>bb :!bundle install<cr>
 
 "" Git
 map <Leader>gs :Gstatus<CR>
