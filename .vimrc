@@ -28,6 +28,7 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
+"Bundle 'tpope/vim-rvm'
 
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
@@ -211,6 +212,7 @@ nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
 """"""""""""""" File navigation"""""""""""""""
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 map <F2> :NERDTree<CR>
+let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
 "map  <C-]> :tabn<CR> "next tab
 "map  <C-[> :tabp<CR> "previous tab
 
