@@ -27,6 +27,8 @@ Bundle 'skwp/vim-rspec'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdcommenter'
+
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
 
