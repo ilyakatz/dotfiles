@@ -117,7 +117,7 @@ set noerrorbells                  " no beeping please
 
 "set backup                        " save backups
 "set backupdir=$HOME/.vim/tmp      " keep backup files in one location
-"set noswapfile                    " don't use swp files
+set noswapfile                    " don't use swp files
 
 " gist-vim
 let g:gist_open_browser_after_post = 1
@@ -142,56 +142,6 @@ set noesckeys
 command! W w " Bind :W to :w
 command! Q q " Bind :Q to :q
 command! Qall qall
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Test-running stuff
-" https://github.com/r00k/dotfiles/blob/master/vimrc
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! RunCurrentTest()
-  let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\|_test.rb\)$') != -1
-  if in_test_file
-    call SetTestFile()
-
-    if match(expand('%'), '\.feature$') != -1
-      call SetTestRunner("!bin/cucumber")
-      exec g:bjo_test_runner g:bjo_test_file
-    elseif match(expand('%'), '_spec\.rb$') != -1
-      call SetTestRunner("! rspec")
-      xec g:bjo_test_runner g:bjo_test_file
-    else
-      call SetTestRunner("!ruby -Itest")
-      exec g:bjo_test_runner g:bjo_test_file
-    endif
-  else
-    exec g:bjo_test_runner g:bjo_test_file
-  endif
-endfunction
-
-function! SetTestRunner(runner)
-  let g:bjo_test_runner=a:runner
-endfunction
-
-function! RunCurrentLineInTest()
-  let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\|_test.rb\)$') != -1
-  if in_test_file
-    call SetTestFileWithLine()
-  end
-
-  exec "!bin/rspec" g:bjo_test_file . ":" . g:bjo_test_file_line
-endfunction
-
-function! SetTestFile()
-  let g:bjo_test_file=@%
-endfunction
-
-function! SetTestFileWithLine()
-  let g:bjo_test_file=@%
-  let g:bjo_test_file_line=line(".")
-endfunction
-
-"map <Leader>t :w<cr>:call RunCurrentTest()<CR>
-"map <Leader>cc :!cucumber --drb %<CR>
-"map <Leader>bb :!bundle install<cr>
 
 "" Git
 map <Leader>gs :Gstatus<CR>
