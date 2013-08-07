@@ -32,6 +32,8 @@ Bundle 'tpope/vim-rvm'
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'waylan/vim-markdown-extra-preview'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-bundler'
 
 "Bundle 'Shougo/neocomplcache.vim'
 "Bundle 'ujihisa/neco-ruby'
