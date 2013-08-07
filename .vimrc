@@ -200,3 +200,5 @@ if has('statusline')
   set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
   set statusline+=%{rvm#statusline()}
 endif
+
+Bundle 'ap/vim-css-color'
