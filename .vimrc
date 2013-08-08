@@ -164,7 +164,7 @@ nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
 """"""""""""""" File navigation"""""""""""""""
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 map <F2> :NERDTree<CR>
-let NERDTreeMapOpenInTab='\r'
+let NERDTreeShowBookmarks=1
 
 " autosave
 :au FocusLost * :wa
