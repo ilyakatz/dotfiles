@@ -23,7 +23,7 @@ Bundle 'vim-scripts/ruby-matchit'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'skwp/vim-rspec'
+Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
@@ -164,6 +164,7 @@ nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
 """"""""""""""" File navigation"""""""""""""""
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 map <F2> :NERDTree<CR>
+let NERDTreeMapOpenInTab='\r'
 
 " autosave
 :au FocusLost * :wa
@@ -202,3 +203,9 @@ if has('statusline')
 endif
 
 Bundle 'ap/vim-css-color'
+
+" Rspec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
