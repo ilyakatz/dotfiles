@@ -17,6 +17,8 @@ Bundle 'gmarik/vundle'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'tpope/vim-rails.git'
+command! Ec Econtroller
+command! Ev Eview
 Bundle 'mileszs/ack.vim.git'
 Bundle 'mscrooloose/nerdtree.git'
 Bundle 'vim-scripts/ruby-matchit'
