@@ -212,6 +212,9 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+" macvim doesn't source profile files
+let $PATH=$PATH . ':/usr/local/bin'
+
 if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
