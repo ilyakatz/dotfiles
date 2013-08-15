@@ -43,6 +43,9 @@ Bundle 'tpope/vim-rbenv'
 
 :autocmd BufEnter * call SetCurrentGemHome()
 
+"Displays the recent mess
+:mess
+
 function! SetCurrentGemHome()
   let $RAILS_PATH = system('bundle show rails')
   let $GEM_HOME= fnamemodify($RAILS_PATH, ":p:h")
