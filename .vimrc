@@ -30,7 +30,6 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-rvm'
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'waylan/vim-markdown-extra-preview'
@@ -39,6 +38,16 @@ Bundle 'tpope/vim-bundler'
 
 "Bundle 'Shougo/neocomplcache.vim'
 "Bundle 'ujihisa/neco-ruby'
+
+Bundle 'tpope/vim-rbenv'
+
+:autocmd BufEnter * call SetCurrentGemHome()
+
+function! SetCurrentGemHome()
+  let $RAILS_PATH = system('bundle show rails')
+  let $GEM_HOME= fnamemodify($RAILS_PATH, ":p:h")
+  :command! -nargs=* AckGem execute 'Ack' <q-args> $GEM_HOME
+endfunction
 
 execute pathogen#infect()
 syntax on
@@ -183,11 +192,6 @@ if has('gui_running')
   set background=light
   colorscheme solarized
 endif
-
-
-let g:neocomplcache_enable_at_startup = 1
-
-:autocmd BufEnter * Rvm
 
 if has('statusline')
   set laststatus=2
