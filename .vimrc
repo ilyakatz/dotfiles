@@ -35,7 +35,6 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-rvm'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'waylan/vim-markdown-extra-preview'
 Bundle 'tpope/vim-endwise'
@@ -43,6 +42,19 @@ Bundle 'tpope/vim-bundler'
 "Bundle 'ervandew/supertab'
 "Bundle 'Shougo/neocomplcache.vim'
 "Bundle 'ujihisa/neco-ruby'
+
+Bundle 'tpope/vim-rbenv'
+
+:autocmd BufEnter * call SetCurrentGemHome()
+
+"Displays the recent mess
+:mess
+
+function! SetCurrentGemHome()
+  let $RAILS_PATH = system('bundle show rails')
+  let $GEM_HOME= fnamemodify($RAILS_PATH, ":p:h")
+  :command! -nargs=* AckGem execute 'Ack' <q-args> $GEM_HOME
+endfunction
 
 execute pathogen#infect()
 syntax on
@@ -185,8 +197,6 @@ if has('gui_running')
   colorscheme solarized
 endif
 
-:autocmd BufEnter * Rvm
-
 if has('statusline')
   set laststatus=2
   " Broken down into easily includeable segments
@@ -199,7 +209,6 @@ if has('statusline')
   set statusline+=%*
   let g:syntastic_enable_signs=1
   set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
-  set statusline+=%{rvm#statusline()}
 endif
 
 Bundle 'ap/vim-css-color'
@@ -209,6 +218,9 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+" macvim doesn't source profile files
+let $PATH=$PATH . ':/usr/local/bin'
 
 if has("gui_running")
   " GUI is running or is about to start.
