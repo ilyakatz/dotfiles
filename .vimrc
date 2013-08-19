@@ -39,6 +39,8 @@ Bundle 'tpope/vim-bundler'
 
 Bundle 'tpope/vim-rbenv'
 
+Bundle 'vim-scripts/AutoComplPop'
+
 :autocmd BufEnter * call SetCurrentGemHome()
 
 "Displays the recent mess
