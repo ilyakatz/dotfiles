@@ -238,6 +238,13 @@ else
   endif
 endif
 
+" http://ncona.com/2013/01/configuring-vim/
+" unindent a line
 imap <S-Tab> <Esc><<i
 nmap <S-tab> <<
 
+" Highlight column 81 to help keep lines of code 80 characters or less "
+set colorcolumn=81
+" Show tabs and trailing spaces "
+"
+ set list listchars=tab:→\ ,trail:·
