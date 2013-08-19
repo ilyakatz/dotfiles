@@ -45,9 +45,10 @@ Bundle 'tpope/vim-rbenv'
 ":mess
 
 function! SetCurrentGemHome()
-  let $RAILS_PATH = system('bundle show rails')
-  let $GEM_HOME= fnamemodify($RAILS_PATH, ":p:h")
-  :command! -nargs=* AckGem execute 'Ack' <q-args> $GEM_HOME
+  "let $RAILS_PATH = system('bundle show rails')
+  "let $GEM_HOME= fnamemodify($RAILS_PATH, ":p:h")
+  let $GEM_HOME="/Users/ilyakatz/.rbenv/versions/2.0.0-p195/gemsets/cgov/gems/"
+  :command! -nargs=* AckGems execute 'Ack' <q-args> $GEM_HOME
 endfunction
 
 execute pathogen#infect()
