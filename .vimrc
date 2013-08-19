@@ -237,3 +237,7 @@ else
     set columns=100
   endif
 endif
+
+imap <S-Tab> <Esc><<i
+nmap <S-tab> <<
+
