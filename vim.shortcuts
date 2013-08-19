@@ -3,6 +3,10 @@
 \t  - run test
 \cc - comment out line
 \ci - toggle commented lines
+:Gist - create public gist
+:Gist -p - create private gist
+:Me - show preview of markdown file
+:A - show alternate file (test/implementation)
 
 Refresh cntrlp
 F5 while in the screen
