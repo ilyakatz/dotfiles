@@ -17,11 +17,6 @@ Bundle 'mattn/gist-vim'
 Bundle 'tpope/vim-rails.git'
 command! Ec Econtroller
 command! Ev Eview
-set omnifunc=rubycomplete#Complete
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-
 Bundle 'mileszs/ack.vim.git'
 Bundle 'mscrooloose/nerdtree.git'
 Bundle 'vim-scripts/ruby-matchit'
@@ -33,11 +28,12 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'waylan/vim-markdown-extra-preview'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-bundler'
-"Bundle 'ervandew/supertab'
+
 "Bundle 'Shougo/neocomplcache.vim'
 "Bundle 'ujihisa/neco-ruby'
 
@@ -153,6 +149,9 @@ imap <silent> <F5> <Esc> mmgg=G'm
 
 " Get rid of the delay when hitting esc!
 set noesckeys
+
+" Make the omnicomplete text readable
+:highlight PmenuSel ctermfg=black
 
 command! W w " Bind :W to :w
 command! Q q " Bind :Q to :q
