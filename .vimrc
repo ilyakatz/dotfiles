@@ -263,5 +263,5 @@ set colorcolumn=81
 map K xkP`[V`]
 nmap J ddp
 " Bubble multiple lines
-vnmap K ddkP
+vmap K ddkP
 vmap J xp`[V`]

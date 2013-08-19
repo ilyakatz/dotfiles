@@ -8,5 +8,8 @@
 :Me - show preview of markdown file
 :A - show alternate file (test/implementation)
 
+J - move line down
+J - move line up
+
 Refresh cntrlp
 F5 while in the screen
