@@ -1,3 +1,6 @@
 :Ev - corresponding view
 :Ec - corresponding controller
 \t  - run test
+
+Refresh cntrlp
+F5 while in the screen

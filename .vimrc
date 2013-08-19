@@ -1,5 +1,3 @@
-"installation
-" ~/.vim/bundle
 "cd ~/.vim/bundle
 "git clone https://github.com/scrooloose/nerdtree.git
 "git clone git://github.com/tpope/vim-bundler.git
@@ -44,7 +42,7 @@ Bundle 'tpope/vim-rbenv'
 :autocmd BufEnter * call SetCurrentGemHome()
 
 "Displays the recent mess
-:mess
+":mess
 
 function! SetCurrentGemHome()
   let $RAILS_PATH = system('bundle show rails')
