@@ -45,11 +45,11 @@ Bundle 'vim-scripts/AutoComplPop'
 
 Bundle 'fholgado/minibufexpl.vim'
 " MiniBufExpl Colors
-hi MBENormal               guifg=#808080 guibg=fg
+hi MBENormal               guifg=#F1266F guibg=fg
 hi MBEChanged              guifg=#CD5907 guibg=fg
 hi MBEVisibleNormal        guifg=#5DC2D6 guibg=fg
 hi MBEVisibleChanged       guifg=#F1266F guibg=fg
-hi MBEVisibleActiveNormal  guifg=#A6DB29 guibg=fg
+hi MBEVisibleActiveNormal  guifg=#295cdb guibg=fg
 hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
 
 "Displays the recent mess
@@ -257,3 +257,11 @@ set colorcolumn=81
 " Show tabs and trailing spaces "
 "
  set list listchars=tab:→\ ,trail:·
+
+"http://intermediaware.com/blog/how-i-learned-to-love-vim-in-7-days
+" Bubble single line
+map K xkP`[V`]
+nmap J ddp
+" Bubble multiple lines
+vnmap K ddkP
+vmap J xp`[V`]
