@@ -224,6 +224,8 @@ if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
   set lines=50 columns=100
+
+  set guifont=Menlo\ Regular:h14 " increase defalt size
 else
   " This is console Vim.
   if exists("+lines")
