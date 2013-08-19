@@ -1,6 +1,8 @@
 :Ev - corresponding view
 :Ec - corresponding controller
 \t  - run test
+\cc - comment out line
+\ci - toggle commented lines
 
 Refresh cntrlp
 F5 while in the screen
