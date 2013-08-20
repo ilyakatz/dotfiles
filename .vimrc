@@ -237,14 +237,6 @@ if has("gui_running")
   set lines=50 columns=100
 
   set guifont=Menlo\ Regular:h14 " increase defalt size
-else
-  " This is console Vim.
-  if exists("+lines")
-    set lines=50
-  endif
-  if exists("+columns")
-    set columns=100
-  endif
 endif
 
 " http://ncona.com/2013/01/configuring-vim/
