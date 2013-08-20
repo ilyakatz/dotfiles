@@ -252,7 +252,7 @@ set colorcolumn=81
 
 "http://intermediaware.com/blog/how-i-learned-to-love-vim-in-7-days
 " Bubble single line
-map K xkP`[V`]
+nmap K ddkP
 nmap J ddp
 " Bubble multiple lines
 vmap K ddkP
