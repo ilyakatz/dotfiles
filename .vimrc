@@ -14,7 +14,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
-Bundle 'tpope/vim-rails.git'
 command! Ec Econtroller
 command! Ev Eview
 Bundle 'mileszs/ack.vim.git'
@@ -25,7 +24,10 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-ragtag'
+Bundle 'vim-ruby/vim-ruby'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
 "Bundle 'Valloric/YouCompleteMe'
@@ -120,6 +122,7 @@ vnoremap <up> gk
 
 "Indentation - please ignore how terrible this may be"
 set autoindent
+set copyindent
 set smartindent "conflicts with filetype plugin indent on"
 set smarttab "Tab key does indents"
 "set tabstop=4
@@ -262,4 +265,7 @@ Bundle 'thinca/vim-fontzoom'
 "shift-minus to decrease size
 nmap _ -
 
+"disable annoying error bells
+set noerrorbells t_vb=
 
+let g:ragtag_global_maps = 1
