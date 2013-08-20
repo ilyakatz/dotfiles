@@ -7,9 +7,16 @@
 :Gist -p - create private gist
 :Me - show preview of markdown file
 :A - show alternate file (test/implementation)
+:b [buff name] - will open buffer with that (part-)name or buffer number
+
 
 J - move line down
-J - move line up
+K - move line up
+
+In insert models
+
+<C-X>=        foo<%= ^ %>
+
 
 Refresh cntrlp
 F5 while in the screen
