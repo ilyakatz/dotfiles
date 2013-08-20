@@ -188,6 +188,7 @@ nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
 """"""""""""""" File navigation"""""""""""""""
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 map <F2> :NERDTree<CR>
+let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
 let NERDTreeShowBookmarks=1
 
 " autosave
@@ -195,7 +196,6 @@ let NERDTreeShowBookmarks=1
 :set autowriteall
 
 
-let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
 "map  <C-]> :tabn<CR> "next tab
 "map  <C-[> :tabp<CR> "previous tab
 
