@@ -257,3 +257,9 @@ nmap J ddp
 " Bubble multiple lines
 vmap K ddkP
 vmap J xp`[V`]
+
+Bundle 'thinca/vim-fontzoom'
+"shift-minus to decrease size
+nmap _ -
+
+
