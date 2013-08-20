@@ -269,3 +269,6 @@ nmap _ -
 set noerrorbells t_vb=
 
 let g:ragtag_global_maps = 1
+
+" comment for the future
+" xolox/vim-session
