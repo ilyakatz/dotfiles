@@ -183,15 +183,15 @@ let NERDTreeShowBookmarks=1
 :au FocusLost * :wa
 :set autowriteall
 
-
-"map  <C-]> :tabn<CR> "next tab
-"map  <C-[> :tabp<CR> "previous tab
-
 """""""""""""" Colors """"""""""""""""""
 if has('gui_running')
   syntax enable
   set background=light
   colorscheme solarized
+  " GUI is running or is about to start.
+  " Maximize gvim window.
+  set lines=50 columns=100
+  set guifont=Menlo\ Regular:h14 " increase defalt size
 endif
 
 if has('statusline')
@@ -219,24 +219,13 @@ map <Leader>a :call RunAllSpecs()<CR>
 " macvim doesn't source profile files
 let $PATH=$PATH . ':/usr/local/bin'
 
-if has("gui_running")
-  " GUI is running or is about to start.
-  " Maximize gvim window.
-  set lines=50 columns=100
-
-  set guifont=Menlo\ Regular:h14 " increase defalt size
-endif
-
 " http://ncona.com/2013/01/configuring-vim/
 " unindent a line
 imap <S-Tab> <Esc><<i
 nmap <S-tab> <<
 
-" Highlight column 81 to help keep lines of code 80 characters or less "
-set colorcolumn=81
 " Show tabs and trailing spaces "
-"
- set list listchars=tab:→\ ,trail:·
+set list listchars=tab:→\ ,trail:·
 
 "http://intermediaware.com/blog/how-i-learned-to-love-vim-in-7-days
 " Bubble single line
