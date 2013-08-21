@@ -46,8 +46,6 @@ Bundle 'Yggdroot/indentLine'
 let g:indentLine_color_gui = '#A4E57E'
 let g:indentLine_char = "|"
 
-:autocmd BufEnter * call SetCurrentGemHome()
-
 Bundle 'fholgado/minibufexpl.vim'
 " MiniBufExpl Colors
 hi MBENormal               guifg=#F1266F guibg=fg
@@ -57,15 +55,26 @@ hi MBEVisibleChanged       guifg=#F1266F guibg=fg
 hi MBEVisibleActiveNormal  guifg=#295cdb guibg=fg
 hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
 
-"Displays the recent mess
-":mess
+" annoying messages, use for debugging only
+:mess
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" update ack command to be able to search through the gem files
+:autocmd BufEnter * call SetCurrentGemHome()
 function! SetCurrentGemHome()
-  "let $RAILS_PATH = system('bundle show rails')
-  "let $GEM_HOME= fnamemodify($RAILS_PATH, ":p:h")
-  let $GEM_HOME="/Users/ilyakatz/.rbenv/versions/2.0.0-p195/gemsets/cgov/gems/"
-  :command! -nargs=* AckGems execute 'Ack' <q-args> $GEM_HOME
+    call UpdateGemPath()
+    :command! -nargs=* AckGems execute 'Ack' <q-args> $GEM_PATH
 endfunction
+
+function! UpdateGemPath()
+  let $GEM_PREFIX=system("rbenv prefix")
+  let $GEMSET_FILE_NAME=system("rbenv gemset file")
+  let $GEMSET_NAME=system("cat " . $GEMSET_FILE_NAME)
+  let $GEM_PATH=join([$GEM_PREFIX, "gemsets",$GEMSET_NAME],"/")
+  let $GEM_PATH = substitute($GEM_PATH,"[\n|\r]*","","g")
+endfunction
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 execute pathogen#infect()
 syntax on
