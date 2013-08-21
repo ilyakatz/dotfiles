@@ -112,32 +112,10 @@ set incsearch "Incremental search: search as you type"
 "Make Y behave like other capitals"
 nnoremap Y y$
 
-"Better split movement"
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-inoremap <c-h> <Esc><c-w>h
-inoremap <c-l> <Esc><c-w>l
-inoremap <c-j> <Esc><c-w>j
-inoremap <c-k> <Esc><c-w>k
-
-"Better wrapped line navigation"
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
-nnoremap <down> gj
-nnoremap <up> gk
-vnoremap <down> gj
-vnoremap <up> gk
-
-"Indentation - please ignore how terrible this may be"
 set autoindent
 set copyindent
 set smartindent "conflicts with filetype plugin indent on"
 set smarttab "Tab key does indents"
-"set tabstop=4
 set shiftwidth=2
 set expandtab
 
@@ -148,11 +126,6 @@ vnoremap <Tab> >gv
 vnoremap > >gv
 vnoremap = =gv
 "gv reselects the previous selection"
-
-"Shift-tab reverse-indenting" nnoremap <S-Tab> << inoremap <S-Tab> <Esc><<i vnoremap <S-Tab> <gv vnoremap < <gv "gv reselects the previous selection"
-
-"Delete key no longer deletes in normal mode"
-nnoremap <del> <right>
 
 set noerrorbells                  " no beeping please
 
