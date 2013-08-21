@@ -16,7 +16,8 @@ K - move line up
 In insert models
 
 <C-X>=        foo<%= ^ %>
-
+tag<C-X>Enter <tag></tag>
+<C-X>/        closes the last open tag
 
 Refresh cntrlp
 F5 while in the screen

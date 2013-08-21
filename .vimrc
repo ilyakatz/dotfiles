@@ -1,4 +1,4 @@
-"cd ~/.vim/bundle
+  "cd ~/.vim/bundle
 "git clone https://github.com/scrooloose/nerdtree.git
 "git clone git://github.com/tpope/vim-bundler.git
 "git clone git://github.com/tpope/vim-fugitive.git
@@ -42,6 +42,9 @@ Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-rbenv'
 
 Bundle 'vim-scripts/AutoComplPop'
+Bundle 'Yggdroot/indentLine'
+let g:indentLine_color_gui = '#A4E57E'
+let g:indentLine_char = "|"
 
 :autocmd BufEnter * call SetCurrentGemHome()
 
