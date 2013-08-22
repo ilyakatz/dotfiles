@@ -47,6 +47,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 
 set -o vi
+set EDITOR=vi
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/opt/local/bin:/opt/local/sbin:
 export PATH=$PATH:/usr/local/mysql/bin
