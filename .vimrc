@@ -56,7 +56,7 @@ hi MBEVisibleActiveNormal  guifg=#295cdb guibg=fg
 hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
 
 " annoying messages, use for debugging only
-:mess
+":mess
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " update ack command to be able to search through the gem files
@@ -227,13 +227,12 @@ nmap <S-tab> <<
 " Show tabs and trailing spaces "
 set list listchars=tab:→\ ,trail:·
 
-"http://intermediaware.com/blog/how-i-learned-to-love-vim-in-7-days
-" Bubble single line
-nmap K ddkP
-nmap J ddp
-" Bubble multiple lines
-vmap K ddkP
-vmap J xp`[V`]
+" http://vim.wikia.com/wiki/Moving_lines_up_or_down
+" bubble lines up or down
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
 
 Bundle 'thinca/vim-fontzoom'
 "shift-minus to decrease size
