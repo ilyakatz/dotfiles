@@ -1,8 +1,6 @@
 [user]
 	name = Ilya Katz
-        email = ilyakatz@gmail.com
-[github]
-    user = ilyakatz
+	email = ilyakatz@gmail.com
 [credential]
 	helper = osxkeychain
 [core]
@@ -35,7 +33,7 @@
 	local = yellow
 	remote = green
 [color "diff"]
-	meta = yellow
+	meta = blue
 	frag = magenta
 	old = red
 	new = green
@@ -48,3 +46,5 @@
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
 
+[github]
+	user = ilyakatz
