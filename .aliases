@@ -5,6 +5,8 @@ alias grm='git ls-files --deleted | xargs git rm'
 alias gpr='git pull --rebase'
 alias gma='git commit -am'
 alias gm='git commit -m'
+alias gp='git push'
+alias gs='git status'
 alias gbl="git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(committerdate:short) | %(authorname) | %(refname:short)'"
 
 
@@ -16,6 +18,7 @@ alias bes='be spork'
 alias besc='bes cucumber'
 alias besr='bes rspec'
 alias cuc='spring cucumber'
+alias spec='spring rspec'
 alias fs='foreman start'
 
 #rails
