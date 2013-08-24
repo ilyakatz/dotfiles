@@ -35,7 +35,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'waylan/vim-markdown-extra-preview'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-bundler'
-
+Bundle 'vim-scripts/EasyGrep'
 "Bundle 'Shougo/neocomplcache.vim'
 "Bundle 'ujihisa/neco-ruby'
 

@@ -1,0 +1,3 @@
+--ignore-dir=is:log
+--ignore-dir=is:tmp
+--ignore-dir=is:public/assets

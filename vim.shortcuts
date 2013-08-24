@@ -8,10 +8,11 @@
 :Me - show preview of markdown file
 :A - show alternate file (test/implementation)
 :b [buff name] - will open buffer with that (part-)name or buffer number
-
-
 J - move line down
 K - move line up
+<Leader>vv  - Grep for the word under the cursor, match all occurences, like |gstar|
+<Leader>vV  - Grep for the word under the cursor, match whole word, like |star|
+:promptrepl
 
 In insert models
 
