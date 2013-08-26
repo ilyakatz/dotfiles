@@ -10,7 +10,7 @@ GREEN="\[\033[0;32m\]"
 BLACK="\[\033[0;30m\]"
 
 #$RED\$(date +%H:%M)
-PS1="\w$YELLOW \$(parse_git_branch)$GREEN\$ $BLACK"
+PS1="\w$RED \$(parse_git_branch)$GREEN\$ $BLACK"
 
 
 #git bash completion
