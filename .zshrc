@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="kphoen"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -47,11 +47,16 @@ source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 
 set -o vi
-set EDITOR=vi
+export EDITOR=vi
+export BUNDLER_EDITOR=mvim
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/opt/local/bin:/opt/local/sbin:
 export PATH=$PATH:/usr/local/mysql/bin
 
 export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
+
+export PATH=$PATH:/Applications/MacVim/
+
+
 eval "$(rbenv init -)"

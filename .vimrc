@@ -14,8 +14,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
-command! Ec Econtroller
-command! Ev Eview
 Bundle 'mileszs/ack.vim.git'
 Bundle 'mscrooloose/nerdtree.git'
 Bundle 'vim-scripts/ruby-matchit'
@@ -24,7 +22,11 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-cucumber'
+
 Bundle 'tpope/vim-rails.git'
+command! Ec Econtroller
+command! Ev Eview
+
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
 Bundle 'vim-ruby/vim-ruby'
@@ -59,11 +61,17 @@ hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
 ":mess
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" update ack command to be able to search through the gem files
+" update various search commands to be able to search through the gem files
 :autocmd BufEnter * call SetCurrentGemHome()
+
 function! SetCurrentGemHome()
     call UpdateGemPath()
+    call UpdateSearchCommands()
+endfunction
+
+function! UpdateSearchCommands()
     :command! -nargs=* AckGems execute 'Ack' <q-args> $GEM_PATH
+    map <c-g> :CtrlP $GEM_PATH
 endfunction
 
 function! UpdateGemPath()
