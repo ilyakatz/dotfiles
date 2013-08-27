@@ -1,3 +1,3 @@
 # gems required for the system
 
-gem install git_remote_branch
+sudo gem install git_remote_branch
