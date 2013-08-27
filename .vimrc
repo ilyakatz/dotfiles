@@ -18,15 +18,8 @@ Bundle 'vim-scripts/gitignore'
 Bundle 'gmarik/vundle'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
-command! Ec Econtroller
-command! Ev Eview
 Bundle 'mileszs/ack.vim.git'
 Bundle 'mscrooloose/nerdtree.git'
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
-map <F2> :NERDTreeFind<CR>
-let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
-let NERDTreeShowBookmarks=1
-
 Bundle 'vim-scripts/ruby-matchit'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jistr/vim-nerdtree-tabs'
@@ -34,6 +27,9 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-rails.git'
+command! Ec Econtroller
+command! Ev Eview
+
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
 Bundle 'vim-ruby/vim-ruby'
@@ -185,6 +181,11 @@ nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
 "    :map \A  oanother line <Esc>
 
 
+""""""""""""""" File navigation"""""""""""""""
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+map <F2> :NERDTree<CR>
+let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
+let NERDTreeShowBookmarks=1
 
 " autosave
 :au FocusLost * :wa
