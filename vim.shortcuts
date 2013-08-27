@@ -14,14 +14,21 @@ K - move line up
 <Leader>vV  - Grep for the word under the cursor, match whole word, like |star|
 :promptrepl
 <c-g> - open files in gem directory
+
 <c-w> - close buffer
 
 
-In insert models
+#In insert models
 
+##vim-ragtag
+<C-X>-        <% %>
 <C-X>=        foo<%= ^ %>
 tag<C-X>Enter <tag></tag>
 <C-X>/        closes the last open tag
 
 Refresh cntrlp
 F5 while in the screen
+
+
+Show variables
+:set wildignore
