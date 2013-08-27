@@ -60,18 +60,21 @@ hi MBEVisibleChanged       guifg=#F1266F guibg=fg
 hi MBEVisibleActiveNormal  guifg=#295cdb guibg=fg
 hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
 
-Bundle 'rbgrouleff/bclose.vim'
-nmap <c-w> :Bclose<cr>
-
 " annoying messages, use for debugging only
 ":mess
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" update ack command to be able to search through the gem files
+" update various search commands to be able to search through the gem files
 :autocmd BufEnter * call SetCurrentGemHome()
+
 function! SetCurrentGemHome()
     call UpdateGemPath()
+    call UpdateSearchCommands()
+endfunction
+
+function! UpdateSearchCommands()
     :command! -nargs=* AckGems execute 'Ack' <q-args> $GEM_PATH
+    map <c-g> :CtrlP $GEM_PATH
 endfunction
 
 function! UpdateGemPath()
