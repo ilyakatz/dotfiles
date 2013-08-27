@@ -14,19 +14,22 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+command! Ec Econtroller
+command! Ev Eview
 Bundle 'mileszs/ack.vim.git'
 Bundle 'mscrooloose/nerdtree.git'
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+map <F2> :NERDTreeFind<CR>
+let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
+let NERDTreeShowBookmarks=1
+
 Bundle 'vim-scripts/ruby-matchit'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-cucumber'
-
 Bundle 'tpope/vim-rails.git'
-command! Ec Econtroller
-command! Ev Eview
-
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
 Bundle 'vim-ruby/vim-ruby'
@@ -57,21 +60,18 @@ hi MBEVisibleChanged       guifg=#F1266F guibg=fg
 hi MBEVisibleActiveNormal  guifg=#295cdb guibg=fg
 hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
 
+Bundle 'rbgrouleff/bclose.vim'
+nmap <c-w> :Bclose<cr>
+
 " annoying messages, use for debugging only
 ":mess
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" update various search commands to be able to search through the gem files
+" update ack command to be able to search through the gem files
 :autocmd BufEnter * call SetCurrentGemHome()
-
 function! SetCurrentGemHome()
     call UpdateGemPath()
-    call UpdateSearchCommands()
-endfunction
-
-function! UpdateSearchCommands()
     :command! -nargs=* AckGems execute 'Ack' <q-args> $GEM_PATH
-    map <c-g> :CtrlP $GEM_PATH
 endfunction
 
 function! UpdateGemPath()
@@ -181,11 +181,6 @@ nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
 "    :map \A  oanother line <Esc>
 
 
-""""""""""""""" File navigation"""""""""""""""
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
-map <F2> :NERDTree<CR>
-let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
-let NERDTreeShowBookmarks=1
 
 " autosave
 :au FocusLost * :wa

@@ -14,6 +14,8 @@ K - move line up
 <Leader>vV  - Grep for the word under the cursor, match whole word, like |star|
 :promptrepl
 <c-g> - open files in gem directory
+<c-w> - close buffer
+
 
 In insert models
 
