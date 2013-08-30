@@ -278,3 +278,8 @@ let g:ragtag_global_maps = 1
 
 " comment for the future
 " xolox/vim-session
+
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
