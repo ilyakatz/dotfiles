@@ -51,11 +51,20 @@ export EDITOR=vi
 export BUNDLER_EDITOR=mvim
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/opt/local/bin:/opt/local/sbin:
+export PATH=$PATH:/opt/local/bin
+export PATH=$PATH:/opt/local/sbin
 export PATH=$PATH:/usr/local/mysql/bin
-
+export PATH=$PATH:/usr/local/heroku/bin
+export PATH=$PATH:/opt/local/bin
+export PATH=$PATH:/home/user/bin
+export PATH=$PATH:/usr/lib/lightdm/lightdm
+export PATH=$PATH:/usr/sbin
+export PATH=$PATH:/usr/bin
+export PATH=$PATH:/sbin
+export PATH=$PATH:/bin
+export PATH=$PATH:/usr/games/gnome-sudoku
 export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
-
 export PATH=$PATH:/Applications/MacVim/
 
 
