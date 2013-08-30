@@ -64,8 +64,7 @@ export PATH=$PATH:/sbin
 export PATH=$PATH:/bin
 export PATH=$PATH:/usr/games/gnome-sudoku
 export PATH=/usr/local/bin:$PATH
-export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=$PATH:/Applications/MacVim/
 
-
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
