@@ -1,4 +1,4 @@
-  "cd ~/.vim/bundle
+"cd ~/.vim/bundle
 "git clone https://github.com/scrooloose/nerdtree.git
 "git clone git://github.com/tpope/vim-bundler.git
 "git clone git://github.com/tpope/vim-fugitive.git
@@ -87,13 +87,13 @@ nmap <c-{> :MBEbp<cr>
 :autocmd BufEnter * call SetCurrentGemHome()
 
 function! SetCurrentGemHome()
-    call UpdateGemPath()
-    call UpdateSearchCommands()
+  call UpdateGemPath()
+  call UpdateSearchCommands()
 endfunction
 
 function! UpdateSearchCommands()
-    :command! -nargs=* AckGems execute 'Ack' <q-args> $GEM_PATH
-    map <c-g> :CtrlP $GEM_PATH
+  :command! -nargs=* AckGems execute 'Ack' <q-args> $GEM_PATH
+  map <c-g> :CtrlP $GEM_PATH
 endfunction
 
 function! UpdateGemPath()
