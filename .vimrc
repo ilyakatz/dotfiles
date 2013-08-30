@@ -254,6 +254,16 @@ nnoremap <C-k> :m .-2<CR>==
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+" http://amix.dk/vim/vimrc.html
+if has("mac") || has("macunix")
+  nmap <D-j> <C-j>
+  nmap <D-k> <C-k>
+  vmap <D-j> <C-j>
+  vmap <D-k> <C-k>
+endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 Bundle 'thinca/vim-fontzoom'
 "shift-minus to decrease size
 nmap _ -
