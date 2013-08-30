@@ -11,6 +11,10 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 "  " required!
+"
+Bundle 'vim-scripts/gitignore'
+":autocmd BufEnter *  WildignoreFromGitignore
+
 Bundle 'gmarik/vundle'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
