@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="remind_reload" mtime="1375446082" type="bool" value="false"/>
+	<entry name="first_run" mtime="1368328757" type="bool" value="false"/>
+	<entry name="show_details" mtime="1377827386" type="bool" value="false"/>
+	<entry name="launch_time" mtime="1377827386" type="int" value="1377827386"/>
+</gconf>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="num_workspaces" mtime="1375672292" type="int" value="2"/>
+	<entry name="visual_bell_type" mtime="1375671897" type="string">
+		<stringvalue>frame_flash</stringvalue>
+	</entry>
+	<entry name="auto_raise_delay" mtime="1375671896" type="int" value="1000"/>
+	<entry name="auto_raise" mtime="1375671896" type="bool" value="true"/>
+</gconf>

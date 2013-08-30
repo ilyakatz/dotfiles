@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="binding" mtime="1368491595" type="string">
+		<stringvalue>&lt;Control&gt;&lt;Alt&gt;6</stringvalue>
+	</entry>
+	<entry name="action" mtime="1368491595" type="string">
+		<stringvalue>lookit --capture-window</stringvalue>
+	</entry>
+	<entry name="name" mtime="1368491595" type="string">
+		<stringvalue>Lookit: Capture Window</stringvalue>
+	</entry>
+</gconf>

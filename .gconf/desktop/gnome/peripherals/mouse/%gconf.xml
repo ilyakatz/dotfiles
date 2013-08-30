@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="motion_acceleration" mtime="1377779836" type="float" value="3"/>
+	<entry name="left_handed" mtime="1375545385" type="bool" value="false"/>
+	<entry name="double_click" mtime="1375545088" type="int" value="700"/>
+	<entry name="motion_threshold" mtime="1377779843" type="int" value="1"/>
+</gconf>

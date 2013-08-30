@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="border_effect" mtime="1368494764" type="string">
+		<stringvalue>none</stringvalue>
+	</entry>
+	<entry name="include_pointer" mtime="1368494764" type="bool" value="true"/>
+	<entry name="include_border" mtime="1368494764" type="bool" value="true"/>
+</gconf>

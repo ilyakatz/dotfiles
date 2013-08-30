@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="horiz_scroll_enabled" mtime="1375545127" type="bool" value="false"/>
+	<entry name="tap_to_click" mtime="1375545116" type="bool" value="true"/>
+	<entry name="disable_while_typing" mtime="1375545117" type="bool" value="true"/>
+	<entry name="scroll_method" mtime="1375569925" type="string">
+		<stringvalue>two-finger-scrolling</stringvalue>
+	</entry>
+</gconf>

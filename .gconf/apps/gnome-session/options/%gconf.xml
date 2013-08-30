@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="auto_save_session" mtime="1374205972" type="bool" value="true"/>
+	<entry name="logout_prompt" mtime="1374205969" type="bool" value="false"/>
+</gconf>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="volume_mute" mtime="1351523847" type="string">
+		<stringvalue>F8</stringvalue>
+	</entry>
+	<entry name="volume_up" mtime="1351523838" type="string">
+		<stringvalue>F10</stringvalue>
+	</entry>
+	<entry name="volume_down" mtime="1351523843" type="string">
+		<stringvalue>F9</stringvalue>
+	</entry>
+</gconf>

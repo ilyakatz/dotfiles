@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="action" mtime="1368333289" type="string">
+		<stringvalue>xdotool key XF86MonBrightnessUp</stringvalue>
+	</entry>
+	<entry name="name" mtime="1368333289" type="string">
+		<stringvalue>Brightness Up</stringvalue>
+	</entry>
+	<entry name="binding" mtime="1368333310" type="string">
+		<stringvalue>F7</stringvalue>
+	</entry>
+</gconf>

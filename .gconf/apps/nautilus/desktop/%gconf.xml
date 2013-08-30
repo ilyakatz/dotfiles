@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="computer_icon_visible" mtime="1375672397" type="bool" value="false"/>
+</gconf>
