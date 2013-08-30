@@ -61,6 +61,19 @@ hi MBEVisibleChanged       guifg=#F1266F guibg=fg
 hi MBEVisibleActiveNormal  guifg=#295cdb guibg=fg
 hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
 
+" Return to last edit position when opening files (You want this!)
+autocmd BufReadPost *
+      \ if line("'\"") > 0 && line("'\"") <= line("$") |
+      \   exe "normal! g`\"" |
+      \ endif
+" Remember info about open buffers on close
+set viminfo^=%
+
+Bundle 'rbgrouleff/bclose.vim'
+"nmap <c-w> :Bclose<cr>
+nmap <c-{> :MBEbp<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " annoying messages, use for debugging only
 ":mess
 
