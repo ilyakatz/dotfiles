@@ -51,6 +51,7 @@ Bundle 'Yggdroot/indentLine'
 let g:indentLine_color_gui = '#A4E57E'
 let g:indentLine_char = "|"
 
+"""""" Buffers """"""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'fholgado/minibufexpl.vim'
 " MiniBufExpl Colors
 hi MBENormal               guifg=#F1266F guibg=fg
@@ -192,11 +193,11 @@ nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
 """""""""""""" Colors """"""""""""""""""
 if has('gui_running')
   syntax enable
-  set background=light
+  "set background=light
   colorscheme solarized
   " GUI is running or is about to start.
   " Maximize gvim window.
-  set lines=50 columns=100
+  set lines=999 columns=999
   set guifont=Menlo\ Regular:h14 " increase defalt size
 endif
 
@@ -233,6 +234,7 @@ nmap <S-tab> <<
 " Show tabs and trailing spaces "
 set list listchars=tab:→\ ,trail:·
 
+""""""bubbling lines up and down """""""""""""""""""""""""""""
 " http://vim.wikia.com/wiki/Moving_lines_up_or_down
 " bubble lines up or down
 nnoremap <C-j> :m .+1<CR>==
