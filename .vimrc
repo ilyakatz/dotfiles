@@ -215,7 +215,7 @@ if has('gui_running')
   colorscheme solarized
   " GUI is running or is about to start.
   " Maximize gvim window.
-  set lines=999 columns=999
+  set lines=60 columns=999
   set guifont=Menlo\ Regular:h14 " increase defalt size
 endif
 
@@ -286,6 +286,15 @@ let g:ragtag_global_maps = 1
 " xolox/vim-session
 
 augroup myvimrc
-    au!
-    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+  au!
+  if has('gui_running')
+    if has("mac")  || has("macunix")
+      let $rcfile= $MYVIMRC
+    else
+      let $rcfile =  $MYGVIMRC
+    endif
+  else
+    let $rcfile = $MYVIMRC
+  endif
+  au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so  $rcfile
 augroup END
