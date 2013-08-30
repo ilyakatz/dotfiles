@@ -268,8 +268,11 @@ Bundle 'thinca/vim-fontzoom'
 "shift-minus to decrease size
 nmap _ -
 
-"disable annoying error bells
-set noerrorbells t_vb=
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
 
 let g:ragtag_global_maps = 1
 
