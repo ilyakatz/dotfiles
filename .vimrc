@@ -83,8 +83,9 @@ nmap <c-{> :MBEbp<cr>
 ":mess
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" update ack command to be able to search through the gem files
+" update various search commands to be able to search through the gem files
 :autocmd BufEnter * call SetCurrentGemHome()
+
 function! SetCurrentGemHome()
     call UpdateGemPath()
     call UpdateSearchCommands()
