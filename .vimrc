@@ -36,6 +36,7 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-fugitive.git'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
@@ -222,7 +223,7 @@ if has('statusline')
   " Broken down into easily includeable segments
   set statusline=%<%f\    " Filename
   set statusline+=%w%h%m%r " Options
-  "  set statusline+=%{fugitive#statusline()} "  Git Hotness
+  set statusline+=%{fugitive#statusline()} "  Git Hotness
   set statusline+=\ [%{getcwd()}]          " current dir
   set statusline+=%#warningmsg#
   set statusline+=%{SyntasticStatuslineFlag()}
