@@ -57,14 +57,14 @@ let g:indentLine_color_gui = '#A4E57E'
 let g:indentLine_char = "|"
 
 """""" Buffers """"""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'fholgado/minibufexpl.vim'
+" Bundle 'fholgado/minibufxpl.vim'
 " MiniBufExpl Colors
-hi MBENormal               guifg=#F1266F guibg=fg
-hi MBEChanged              guifg=#CD5907 guibg=fg
-hi MBEVisibleNormal        guifg=#5DC2D6 guibg=fg
-hi MBEVisibleChanged       guifg=#F1266F guibg=fg
-hi MBEVisibleActiveNormal  guifg=#295cdb guibg=fg
-hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
+" hi MBENormal               guifg=#F1266F guibg=fg
+" hi MBEChanged              guifg=#CD5907 guibg=fg
+" hi MBEVisibleNormal        guifg=#5DC2D6 guibg=fg
+" hi MBEVisibleChanged       guifg=#F1266F guibg=fg
+" hi MBEVisibleActiveNormal  guifg=#295cdb guibg=fg
+" hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
@@ -283,18 +283,22 @@ set tm=500
 let g:ragtag_global_maps = 1
 
 " comment for the future
-" xolox/vim-session
+Bundle 'xolox/vim-session'
+Bundle 'xolox/vim-misc'
+let g:session_autoload='yes'
+let g:session_autosave='yes'
+let g:session_autosave_periodic='yes'
 
 augroup myvimrc
   au!
   if has('gui_running')
     if has("mac")  || has("macunix")
-      let $rcfile= $MYVIMRC
+      let $rcfile=$MYVIMRC
     else
-      let $rcfile =  $MYGVIMRC
+      let $rcfile=$MYGVIMRC
     endif
   else
-    let $rcfile = $MYVIMRC
+    let $rcfile=$MYVIMRC
   endif
   au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so  $rcfile
 augroup END
