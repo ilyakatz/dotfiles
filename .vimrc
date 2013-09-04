@@ -87,6 +87,7 @@ nmap <c-{> :MBEbp<cr>
 :autocmd BufEnter * call SetCurrentGemHome()
 
 function! SetCurrentGemHome()
+  "echom "in SetCurrentGemHome"
   call UpdateGemPath()
   call UpdateSearchCommands()
 endfunction
@@ -282,13 +283,16 @@ set tm=500
 
 let g:ragtag_global_maps = 1
 
-" comment for the future
+""""Sessions""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-misc'
-let g:session_autoload='yes'
 let g:session_autosave='yes'
-let g:session_autosave_periodic='yes'
+let g:session_autoload='prompt'
+let g:session_default_overwrite=1
+let g:session_default_name="project"
+let g:session_default_to_last=1
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 augroup myvimrc
   au!
   if has('gui_running')
