@@ -56,6 +56,11 @@ Bundle 'Yggdroot/indentLine'
 let g:indentLine_color_gui = '#A4E57E'
 let g:indentLine_char = "|"
 
+
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'briancollins/vim-jst'
+au BufNewFile,BufRead *.jst.eco    set filetype=jst.html
+
 """""" Buffers """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Bundle 'fholgado/minibufxpl.vim'
 " MiniBufExpl Colors
