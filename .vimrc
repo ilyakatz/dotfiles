@@ -59,7 +59,10 @@ let g:indentLine_char = "|"
 
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'briancollins/vim-jst'
-au BufNewFile,BufRead *.jst.eco    set filetype=jst.html
+
+augroup filetypedetect
+  au BufNewFile,BufRead *.jst.eco    set filetype=jst.html
+augroup END
 
 """""" Buffers """"""""""""""""""""""""""""""""""""""""""""""""""""
 " Bundle 'fholgado/minibufxpl.vim'
