@@ -288,6 +288,10 @@ set tm=500
 
 let g:ragtag_global_maps = 1
 
+" http://stackoverflow.com/questions/54255/in-vim-is-there-a-way-to-delete-without-putting-text-in-the-register
+" Override visually selected text
+vmap r "_dP
+
 """"Sessions""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-misc'
@@ -311,3 +315,9 @@ augroup myvimrc
   endif
   au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so  $rcfile
 augroup END
+
+
+"""""" Preview current file in browser with highlighting """"""""""
+" :TOhtml
+" :!open %
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
