@@ -23,7 +23,7 @@ command! Ev Eview
 Bundle 'mileszs/ack.vim.git'
 Bundle 'mscrooloose/nerdtree.git'
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
-map <F2> :NERDTreeFind<CR>
+map <tab> :NERDTreeFind<CR>
 let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
 let NERDTreeShowBookmarks=1
 
@@ -159,7 +159,6 @@ set shiftwidth=2
 set expandtab
 
 "Tab always indents"
-nnoremap <Tab> >>
 inoremap <Tab> <Esc>>>i
 vnoremap <Tab> >gv
 vnoremap > >gv
