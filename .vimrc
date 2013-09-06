@@ -23,7 +23,7 @@ command! Ev Eview
 Bundle 'mileszs/ack.vim.git'
 Bundle 'mscrooloose/nerdtree.git'
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
-map <tab> :NERDTreeFind<CR>
+nmap <tab> :NERDTreeFind<CR>
 let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
 let NERDTreeShowBookmarks=1
 
