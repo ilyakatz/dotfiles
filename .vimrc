@@ -65,6 +65,7 @@ augroup filetypedetect
 augroup END
 
 """""" Buffers """"""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'corntrace/bufexplorer'
 " Bundle 'fholgado/minibufxpl.vim'
 " MiniBufExpl Colors
 " hi MBENormal               guifg=#F1266F guibg=fg

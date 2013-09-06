@@ -16,7 +16,7 @@ K - move line up
 <c-g> - open files in gem directory
 
 <c-w> - close buffer
-
+\be - open buffer explorer window
 
 #In insert models
 
