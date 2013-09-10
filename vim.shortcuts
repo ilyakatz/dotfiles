@@ -1,4 +1,6 @@
-:Ev - corresponding view
+:>Efeatures/connections.feature
+rspec features/connections.feature
+:q- corresponding view
 :Ec - corresponding controller
 \t  - run test
 \cc - comment out line
@@ -6,12 +8,14 @@
 :Gist - create public gist
 :Gist -p - create private gist
 :Me - show preview of markdown file
+:Mm - show preview of markdown
 :A - show alternate file (test/implementation)
 :b [buff name] - will open buffer with that (part-)name or buffer number
 J - move line down
 K - move line up
 <Leader>vv  - Grep for the word under the cursor, match all occurences, like |gstar|
 <Leader>vV  - Grep for the word under the cursor, match whole word, like |star|
+* - search of current text in the file
 :promptrepl
 <c-g> - open files in gem directory
 

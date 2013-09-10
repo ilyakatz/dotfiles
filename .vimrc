@@ -1,4 +1,6 @@
-"cd ~/.vim/bundle
+"https://github.com/skwp/dotfiles/blob/master/vim/vundles.vim
+"
+""cd ~/.vim/bundle
 "git clone https://github.com/scrooloose/nerdtree.git
 "git clone git://github.com/tpope/vim-bundler.git
 "git clone git://github.com/tpope/vim-fugitive.git
@@ -42,12 +44,14 @@ Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'waylan/vim-markdown-extra-preview'
 Bundle 'tpope/vim-endwise'
+Bundle 'waylan/vim-markdown-extra-preview'
+Bundle 'nelstrom/vim-markdown-preview'
 Bundle 'tpope/vim-bundler'
 Bundle 'vim-scripts/EasyGrep'
 "Bundle 'Shougo/neocomplcache.vim'
-"Bundle 'ujihisa/neco-ruby'
+"
+"show_page"Bundle 'ujihisa/neco-ruby'
 
 Bundle 'tpope/vim-rbenv'
 
@@ -59,6 +63,8 @@ let g:indentLine_char = "|"
 
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'briancollins/vim-jst'
+" uncomment when I'm more used to VIm
+"Bundle 'terryma/vim-multiple-cursors'
 
 augroup filetypedetect
   au BufNewFile,BufRead *.jst.eco    set filetype=jst.html
@@ -324,3 +330,11 @@ augroup END
 " :TOhtml
 " :!open %
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" ================ Persistent Undo ==================
+" Keep undo history across sessions, by storing in file.
+" Only works all the time.
+
+silent !mkdir ~/.vim/backups > /dev/null 2>&1
+set undodir=~/.vim/backups
+set undofile
