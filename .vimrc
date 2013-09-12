@@ -66,9 +66,6 @@ Bundle 'briancollins/vim-jst'
 " uncomment when I'm more used to VIm
 "Bundle 'terryma/vim-multiple-cursors'
 
-augroup filetypedetect
-  au BufNewFile,BufRead *.jst.eco    set filetype=jst.html
-augroup END
 
 """""" Buffers """"""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'corntrace/bufexplorer'
@@ -183,7 +180,10 @@ let g:gist_open_browser_after_post = 1
 let g:gist_detect_filetype = 1
 
 " custom syntax highlighting
-au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
+augroup filetypedetect
+  au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
+  au BufNewFile,BufRead {*.jst.eco}    set filetype=jst.html
+augroup END
 
 " auto strip whitespace when saving
 autocmd BufWritePre * :%s/\s\+$//e
