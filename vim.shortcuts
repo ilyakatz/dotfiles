@@ -1,6 +1,6 @@
 :>Efeatures/connections.feature
 rspec features/connections.feature
-:q- corresponding view
+:Ev- corresponding view
 :Ec - corresponding controller
 \t  - run test
 \cc - comment out line
@@ -36,3 +36,7 @@ F5 while in the screen
 
 Show variables
 :set wildignore
+
+#NERDTree
+m - go to the parent directory
+C - change the root directory to current directory
