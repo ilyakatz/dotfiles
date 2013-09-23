@@ -18,6 +18,9 @@ K - move line up
 * - search of current text in the file
 :promptrepl
 <c-g> - open files in gem directory
+:ChooseColor - open colorpicker
+:Ack "stuff" - search for "stuff"
+:Ack - seach for word under cursor
 
 <c-w> - close buffer
 \be - open buffer explorer window
