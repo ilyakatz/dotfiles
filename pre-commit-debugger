@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# http://mark-story.com/posts/view/using-git-commit-hooks-to-prevent-stupid-mistakes
+if git-rev-parse --verify HEAD >/dev/null 2>&1; then
+    against=HEAD
+else
+    against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
+fi
+ 
+for FILE in `git diff-index --name-status $against --| grep -v ".rasb$" |grep -v Gemfile |grep -v web_steps.rb |grep -v env.rb | cut -c3-` ; do
+    # Check if the file contains 'debugger'
+    if [ `grep 'debugger' $FILE -c ` == "1" ]
+    then
+     echo $FILE ' contains debugger!'
+     exit 1
+    fi
+
+    if [ `grep 'console.debug' $FILE -c ` == "1" ]
+    then
+     echo $FILE ' contains console.debug!'
+     exit 1
+    fi
+
+done

@@ -1,0 +1,23 @@
+#!/bin/bash -l
+
+# A git hook script to find and fix trailing whitespace
+# in your commits. Bypass it with the --no-verify option
+# to git-commit
+#
+
+.git/hooks/pre-commit-master-no-no
+if [[ $? == 1 ]]
+then
+  exit 1
+fi
+
+.git/hooks/pre-commit-debugger
+if [[ $? == 1 ]]
+then
+  exit 1
+fi
+
+.git/hooks/pre-commit-trailing-spaces
+.git/hooks/pre-commit-images
+.git/hooks/pre-commit-pair
+

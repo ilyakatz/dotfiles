@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo `git about |grep "git user"`
+
+

@@ -1,0 +1,10 @@
+#!/bin/bash -l
+
+echo "Optimizing images"
+
+# Find image files and optimize them
+for FILE in `exec git diff --name-status |grep -v "^D" | grep ".png$" | awk '$1 != "R" { print $2 }'`; do 
+  echo "Optimizing $FILE"
+  bundle exec smusher $FILE
+  git add "$FILE"
+done
