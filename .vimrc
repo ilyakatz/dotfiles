@@ -44,20 +44,16 @@ Bundle 'tpope/vim-fugitive.git'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
-"Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-endwise'
 Bundle 'waylan/vim-markdown-extra-preview'
 Bundle 'nelstrom/vim-markdown-preview'
 Bundle 'tpope/vim-bundler'
 Bundle 'vim-scripts/EasyGrep'
-"Bundle 'Shougo/neocomplcache.vim'
-"
-"show_page"Bundle 'ujihisa/neco-ruby'
-
 Bundle 'tpope/vim-rbenv'
 
-Bundle 'vim-scripts/AutoComplPop'
+"Bundle 'vim-scripts/AutoComplPop'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'Yggdroot/indentLine'
 let g:indentLine_color_gui = '#A4E57E'
 let g:indentLine_char = "|"
