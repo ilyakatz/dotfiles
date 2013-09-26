@@ -15,6 +15,8 @@ call vundle#rc()
 "  " required!
 "
 Bundle 'vim-scripts/gitignore'
+set wildignore+=spec/reports/**/*
+set wildignore+=spec/reports/*
 ":autocmd BufEnter *  WildignoreFromGitignore
 
 Bundle 'gmarik/vundle'
@@ -66,6 +68,9 @@ Bundle 'briancollins/vim-jst'
 " uncomment when I'm more used to VIm
 "Bundle 'terryma/vim-multiple-cursors'
 
+augroup filetypedetect
+  au BufNewFile,BufRead *.jst.eco    set filetype=jst.html
+augroup END
 
 """""" Buffers """"""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'corntrace/bufexplorer'
@@ -181,10 +186,7 @@ let g:gist_open_browser_after_post = 1
 let g:gist_detect_filetype = 1
 
 " custom syntax highlighting
-augroup filetypedetect
-  au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
-  au BufNewFile,BufRead {*.jst.eco}    set filetype=jst.html
-augroup END
+au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
 
 " auto strip whitespace when saving
 autocmd BufWritePre * :%s/\s\+$//e
@@ -195,9 +197,6 @@ imap <silent> <F5> <Esc> mmgg=G'm
 
 " Get rid of the delay when hitting esc!
 set noesckeys
-
-" Make the omnicomplete text readable
-:highlight PmenuSel ctermfg=black
 
 command! W w " Bind :W to :w
 command! Q q " Bind :Q to :q
@@ -250,6 +249,7 @@ if has('statusline')
 endif
 
 Bundle 'ap/vim-css-color'
+Bundle 'austintaylor/vim-choosecolor'
 
 " Rspec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -295,6 +295,7 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
+set vb
 
 let g:ragtag_global_maps = 1
 
