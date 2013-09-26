@@ -21,7 +21,8 @@ K - move line up
 :ChooseColor - open colorpicker
 :Ack "stuff" - search for "stuff"
 :Ack - seach for word under cursor
-
+<C-]> - go into the definition of class/module/etc under the cursor
+<C-t> - go back to where came from
 <c-w> - close buffer
 \be - open buffer explorer window
 
