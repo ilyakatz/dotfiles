@@ -25,7 +25,7 @@ Bundle 'mattn/gist-vim'
 command! Ec Econtroller
 command! Ev Eview
 Bundle 'mileszs/ack.vim.git'
-Bundle 'mscrooloose/nerdtree.git'
+Bundle 'scrooloose/nerdtree.git'
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 nmap <tab> :NERDTreeFind<CR>
 let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
