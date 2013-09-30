@@ -24,7 +24,7 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 command! Ec Econtroller
 command! Ev Eview
-Bundle 'mileszs/ack.vim.git'
+Bundle 'rking/ag.vim'
 Bundle 'scrooloose/nerdtree.git'
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 nmap <tab> :NERDTreeFind<CR>
@@ -106,7 +106,7 @@ function! SetCurrentGemHome()
 endfunction
 
 function! UpdateSearchCommands()
-  :command! -nargs=* AckGems execute 'Ack' <q-args> $GEM_PATH
+  :command! -nargs=* AgGems execute 'Ag' <q-args> $GEM_PATH
   map <c-g> :CtrlP $GEM_PATH
 endfunction
 
