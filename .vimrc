@@ -15,8 +15,7 @@ call vundle#rc()
 "  " required!
 "
 Bundle 'vim-scripts/gitignore'
-set wildignore+=spec/reports/**/*
-set wildignore+=spec/reports/*
+set wildignore+=*/spec/reports/**
 ":autocmd BufEnter *  WildignoreFromGitignore
 
 Bundle 'gmarik/vundle'
