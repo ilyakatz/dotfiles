@@ -16,6 +16,7 @@ call vundle#rc()
 "
 Bundle 'vim-scripts/gitignore'
 set wildignore+=*/spec/reports/**
+let g:ctrlp_max_files = 0
 ":autocmd BufEnter *  WildignoreFromGitignore
 
 Bundle 'gmarik/vundle'
