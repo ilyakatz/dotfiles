@@ -50,3 +50,7 @@
 	user = ilyakatz
 [merge]
 	tool = vimdiff
+[init]
+	templatedir = ~/.git_template
+[web]
+	browser = open
