@@ -25,6 +25,9 @@ K - move line up
 <C-t> - go back to where came from
 <c-w> - close buffer
 \be - open buffer explorer window
+:  - repeat the last command
+:[command] [up-key] - search for [command]
+:Gbrowse - show link to gitub
 
 #In insert models
 
