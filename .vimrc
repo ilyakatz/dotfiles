@@ -35,7 +35,6 @@ Bundle 'rking/ag.vim'
 Bundle 'qstrahl/vim-matchmaker'
 Bundle 'vim-scripts/gitignore'
 set wildignore+=*/spec/reports/**
-let g:ctrlp_max_files = 0
 ":autocmd BufEnter *  WildignoreFromGitignore
 
 " Project structure
@@ -59,8 +58,8 @@ Bundle 'Yggdroot/indentLine'
 Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-misc'
 Bundle 'thinca/vim-fontzoom'
-let g:indentLine_color_gui = '#A4E57E'
-let g:indentLine_char = "|"
+Bundle 'rbgrouleff/bclose.vim'
+
 
 
 " uncomment when I'm more used to VIm
@@ -89,9 +88,6 @@ autocmd BufReadPost *
 " Remember info about open buffers on close
 set viminfo^=%
 
-Bundle 'rbgrouleff/bclose.vim'
-"nmap <c-w> :Bclose<cr>
-nmap <c-{> :MBEbp<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " annoying messages, use for debugging only
@@ -134,6 +130,16 @@ filetype plugin on
 filetype plugin indent on
 
 """"""" Plugins customization""""""""""""""""""""""""""""""""""
+" ctrlp
+let g:ctrlp_max_files = 0 " no maximum
+
+" indentLine
+let g:indentLine_color_gui = '#A4E57E'
+let g:indentLine_char = "|"
+
+" blclose
+"nmap <c-w> :Bclose<cr>
+nmap <c-{> :MBEbp<cr>
 
 " vim-session
 let g:session_autosave='yes'
