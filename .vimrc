@@ -35,7 +35,6 @@ Bundle 'rking/ag.vim'
 Bundle 'qstrahl/vim-matchmaker'
 Bundle 'vim-scripts/gitignore'
 set wildignore+=*/spec/reports/**
-":autocmd BufEnter *  WildignoreFromGitignore
 
 " Project structure
 Bundle 'scrooloose/nerdtree.git'
