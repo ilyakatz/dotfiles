@@ -1,66 +1,66 @@
 "https://github.com/skwp/dotfiles/blob/master/vim/vundles.vim
 "
-""cd ~/.vim/bundle
-"git clone https://github.com/scrooloose/nerdtree.git
-"git clone git://github.com/tpope/vim-bundler.git
-"git clone git://github.com/tpope/vim-fugitive.git
-"git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-"git clone git://github.com/tpope/vim-rails.git
-"git clone git://github.com/tpope/vim-sensible.git
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
 "  " required!
 "
-Bundle 'vim-scripts/gitignore'
-set wildignore+=*/spec/reports/**
-let g:ctrlp_max_files = 0
-":autocmd BufEnter *  WildignoreFromGitignore
-
 Bundle 'gmarik/vundle'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
-command! Ec Econtroller
-command! Ev Eview
+
+" Frameworks and languages
+Bundle 'othree/html5.vim'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-ragtag'
+Bundle 'vim-scripts/ruby-matchit'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-rbenv'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'briancollins/vim-jst'
+Bundle 'ap/vim-css-color'
+Bundle 'austintaylor/vim-choosecolor'
+
+" Searching
+Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
+Bundle 'qstrahl/vim-matchmaker'
+Bundle 'vim-scripts/gitignore'
+set wildignore+=*/spec/reports/**
+
+" Project structure
 Bundle 'scrooloose/nerdtree.git'
+Bundle 'jistr/vim-nerdtree-tabs'
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 nmap <tab> :NERDTreeFind<CR>
 let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
 let NERDTreeShowBookmarks=1
 
-Bundle 'vim-scripts/ruby-matchit'
-Bundle 'kien/ctrlp.vim'
-Bundle 'jistr/vim-nerdtree-tabs'
+" VCS
 Bundle 'airblade/vim-gitgutter'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-fugitive.git'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdcommenter'
+
+" Vim environment
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-endwise'
 Bundle 'waylan/vim-markdown-extra-preview'
 Bundle 'nelstrom/vim-markdown-preview'
-Bundle 'tpope/vim-bundler'
-Bundle 'vim-scripts/EasyGrep'
-Bundle 'tpope/vim-rbenv'
-
-"Bundle 'vim-scripts/AutoComplPop'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'Yggdroot/indentLine'
-let g:indentLine_color_gui = '#A4E57E'
-let g:indentLine_char = "|"
+Bundle 'xolox/vim-session'
+Bundle 'xolox/vim-misc'
+Bundle 'thinca/vim-fontzoom'
+Bundle 'rbgrouleff/bclose.vim'
 
 
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'briancollins/vim-jst'
+
 " uncomment when I'm more used to VIm
 "Bundle 'terryma/vim-multiple-cursors'
 
@@ -87,9 +87,6 @@ autocmd BufReadPost *
 " Remember info about open buffers on close
 set viminfo^=%
 
-Bundle 'rbgrouleff/bclose.vim'
-"nmap <c-w> :Bclose<cr>
-nmap <c-{> :MBEbp<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " annoying messages, use for debugging only
@@ -120,7 +117,6 @@ endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
@@ -132,7 +128,35 @@ filetype indent on
 filetype plugin on
 filetype plugin indent on
 
-Bundle 'othree/html5.vim'
+""""""" Plugins customization""""""""""""""""""""""""""""""""""
+" ctrlp
+let g:ctrlp_max_files = 0 " no maximum
+
+" indentLine
+let g:indentLine_color_gui = '#A4E57E'
+let g:indentLine_char = "|"
+
+" blclose
+"nmap <c-w> :Bclose<cr>
+nmap <c-{> :MBEbp<cr>
+
+" vim-session
+let g:session_autosave='yes'
+let g:session_autoload='prompt'
+let g:session_default_overwrite=1
+let g:session_default_name="project"
+let g:session_default_to_last=1
+
+" vim-rails
+command! Ec Econtroller
+command! Ev Eview
+
+" gist-vim
+let g:gist_open_browser_after_post = 1
+let g:gist_detect_filetype = 1
+
+""""""" End Plugins customization""""""""""""""""""""""""""""""""""
+
 set history=300 "300 lines of history
 set backspace=indent,eol,start "Backspace over autoindent, line breaks, and the start of insert
 set ruler "Show the ruler"
@@ -140,11 +164,11 @@ set virtualedit=onemore "Allows cursor placement over the line's end in normal m
 set pastetoggle=<F2> "F2 enters paste mode in Insert mode"
 set clipboard=unnamed "OS-level clipboard integration for yank and put"
 set number "Show line numbers"
+
 filetype plugin indent on "Automatic indentation based on filetype"
 let &t_Co=256 "256 colors in the terminal"
 set cursorline "Highlight the current line"
 set mouse=a "Mouse support"
-Helptags
 set hidden "Allow switching from unsaved buffers"
 set confirm "Confirmation dialog instead of fail on unwritten buffers"
 
@@ -177,9 +201,6 @@ set noerrorbells                  " no beeping please
 "set backupdir=$HOME/.vim/tmp      " keep backup files in one location
 set noswapfile                    " don't use swp files
 
-" gist-vim
-let g:gist_open_browser_after_post = 1
-let g:gist_detect_filetype = 1
 
 " custom syntax highlighting
 au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
@@ -198,8 +219,6 @@ command! W w " Bind :W to :w
 command! Q q " Bind :Q to :q
 command! Qall qall
 
-"" Git
-map <Leader>gs :Gstatus<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -244,8 +263,6 @@ if has('statusline')
   set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 endif
 
-Bundle 'ap/vim-css-color'
-Bundle 'austintaylor/vim-choosecolor'
 
 " Rspec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -282,7 +299,7 @@ endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-Bundle 'thinca/vim-fontzoom'
+" vim-fontzoom
 "shift-minus to decrease size
 nmap _ -
 
@@ -299,14 +316,6 @@ let g:ragtag_global_maps = 1
 " Override visually selected text
 vmap r "_dP
 
-""""Sessions""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'xolox/vim-session'
-Bundle 'xolox/vim-misc'
-let g:session_autosave='yes'
-let g:session_autoload='prompt'
-let g:session_default_overwrite=1
-let g:session_default_name="project"
-let g:session_default_to_last=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 augroup myvimrc
