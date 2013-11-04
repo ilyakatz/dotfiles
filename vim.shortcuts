@@ -29,6 +29,9 @@ K - move line up
 :[command] [up-key] - search for [command]
 :Gbrowse - show link to gitub
 
+Emmet
+<C-y>, - convert classes to HTML tags
+
 #In insert models
 
 ##vim-ragtag
