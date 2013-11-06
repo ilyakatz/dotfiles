@@ -1,4 +1,4 @@
-### Rails
+### Ruby/Rails
 
 `:Ev` corresponding view
 
@@ -7,6 +7,8 @@
 `\t`  - run test
 
 `:A` - show alternate file (test/implementation)
+
+`<c-g>` - open files in gem directory
 
 ### Code
 
@@ -21,22 +23,32 @@
 
 `:Gbrowse` - show link to gitub
 
+`:.Gbrowse` - show link in github with line number
+
 ### Markdown
 
 `:Mm` show preview of markdown
 
 ### Buffers
-`:b [buff name]` - will open buffer with that (part-)name or buffer number
+`:b [buff name]` will open buffer with that (part-)name or buffer number
 
-`<c-w>` - close buffer
+`<c-w>` close buffer
 
-J - move line down
-K - move line up
-* - search of current text in the file
-:promptrepl
-<c-g> - open files in gem directory
+### vim general
 
-:ChooseColor - open colorpicker
+`:set wildignore`
+
+`:promptrepl`  open MacVim serach promt
+
+### Navigation
+
+`J` move line down
+
+`K` move line up
+
+`*` search of current text in the file
+
+`:ChooseColor` open colorpicker
 
 ### File management
 
@@ -44,30 +56,36 @@ K - move line up
 
 `:Ag` - seach for word under cursor
 
-<C-]> - go into the definition of class/module/etc under the cursor
-<C-t> - go back to where came from
-\be - open buffer explorer window
-:  - repeat the last command
-:[command] [up-key] - search for [command]
+`<C-]>` go into the definition of class/module/etc under the cursor
+
+`<C-t>` go back to where came from
+
+`\be` - open buffer explorer window
+
+`:`  repeat the last command
+
+`:[command] [up-key]` - search for [command]
 
 ### Multi-cursors
 
 `<c-n>` select word under cursor, press again to sent the next one, and do regular changes to update all selections
+
 #In insert models
 
-##vim-ragtag
-<C-X>-        <% %>
-<C-X>=        foo<%= ^ %>
-tag<C-X>Enter <tag></tag>
-<C-X>/        closes the last open tag
+#### vim-ragtag
 
-Refresh cntrlp
-F5 while in the screen
+`<C-X>-`        <% %>
+
+`<C-X>=`        foo<%= ^ %>
+
+`tag<C-X>Enter` <tag></tag>
+
+`<C-X>/`        closes the last open tag
+
+#### cntrlp
+`F5` refresh
 
 
-### vim general
-
-`:set wildignore`
 
 ### NERDTree
 
