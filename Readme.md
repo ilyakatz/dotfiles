@@ -1,3 +1,6 @@
+
+**bold** indicates insert mode
+
 ### Ruby/Rails
 
 `:Ev` corresponding view
@@ -70,17 +73,15 @@
 
 `<c-n>` select word under cursor, press again to sent the next one, and do regular changes to update all selections
 
-#In insert models
-
 #### vim-ragtag
 
-`<C-X>-`        <% %>
+**`<C-X>-`        <% %>**
 
-`<C-X>=`        foo<%= ^ %>
+**`<C-X>=`        foo<%= ^ %>**
 
-`tag<C-X>Enter` <tag></tag>
+**`tag<C-X>Enter` <tag></tag>**
 
-`<C-X>/`        closes the last open tag
+**`<C-X>/`        closes the last open tag**
 
 #### cntrlp
 `F5` refresh
