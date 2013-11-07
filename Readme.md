@@ -43,6 +43,8 @@
 
 `:promptrepl`  open MacVim serach promt
 
+`:help [name]` show helptags
+
 ### Navigation
 
 `J` move line down
@@ -52,6 +54,10 @@
 `*` search of current text in the file
 
 `:ChooseColor` open colorpicker
+
+`<Leader>w activate easy motion
+
+`<Leader>f{char}` activate easy motion for a given {char}
 
 ### File management
 

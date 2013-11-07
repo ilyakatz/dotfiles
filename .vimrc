@@ -28,6 +28,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'briancollins/vim-jst'
 Bundle 'ap/vim-css-color'
 Bundle 'austintaylor/vim-choosecolor'
+Bundle 'mattn/emmet-vim'
 
 " Searching
 Bundle 'kien/ctrlp.vim'
@@ -58,11 +59,8 @@ Bundle 'xolox/vim-session'
 Bundle 'xolox/vim-misc'
 Bundle 'thinca/vim-fontzoom'
 Bundle 'rbgrouleff/bclose.vim'
-
-
-
-" uncomment when I'm more used to VIm
-"Bundle 'terryma/vim-multiple-cursors'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'Lokaltog/vim-easymotion'
 
 augroup filetypedetect
   au BufNewFile,BufRead *.jst.eco    set filetype=jst.html
@@ -129,6 +127,9 @@ filetype plugin on
 filetype plugin indent on
 
 """"""" Plugins customization""""""""""""""""""""""""""""""""""
+" easymotion
+let g:EasyMotion_leader_key = '<Leader>'
+
 " ctrlp
 let g:ctrlp_max_files = 0 " no maximum
 
