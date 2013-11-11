@@ -130,6 +130,8 @@ filetype plugin indent on
 """"""" Plugins customization""""""""""""""""""""""""""""""""""
 " easymotion
 let g:EasyMotion_leader_key = '<Leader>'
+hi link EasyMotionTarget ErrorMsg
+hi link EasyMotionShade  Comment
 
 " ctrlp
 let g:ctrlp_max_files = 0 " no maximum
