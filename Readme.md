@@ -59,11 +59,11 @@
 
 `<Leader>f{char}` activate easy motion for a given {char}
 
-### File management
+`:Ag! "stuff"` search for "stuff"
 
-`:Ag "stuff"` - search for "stuff"
+`:Ag!` - seach for word under cursor
 
-`:Ag` - seach for word under cursor
+`AgHelp!`  search through vim helptags
 
 `<C-]>` go into the definition of class/module/etc under the cursor
 
