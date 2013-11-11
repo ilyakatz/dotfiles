@@ -7,8 +7,6 @@ call vundle#rc()
 "  " required!
 "
 Bundle 'gmarik/vundle'
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
 
 " Frameworks and languages
 Bundle 'othree/html5.vim'
@@ -48,6 +46,8 @@ let NERDTreeShowBookmarks=1
 " VCS
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive.git'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 
 " Vim environment
 Bundle 'altercation/vim-colors-solarized'
