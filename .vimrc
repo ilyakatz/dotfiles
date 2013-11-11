@@ -27,6 +27,7 @@ Bundle 'briancollins/vim-jst'
 Bundle 'ap/vim-css-color'
 Bundle 'austintaylor/vim-choosecolor'
 Bundle 'mattn/emmet-vim'
+Bundle 'elzr/vim-json'
 
 " Searching
 Bundle 'kien/ctrlp.vim'
