@@ -32,6 +32,7 @@ Bundle 'elzr/vim-json'
 " Searching
 Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
+Bundle 'skwp/greplace.vim'
 Bundle 'qstrahl/vim-matchmaker'
 Bundle 'vim-scripts/gitignore'
 set wildignore+=*/spec/reports/**
@@ -102,7 +103,7 @@ function! SetCurrentGemHome()
 endfunction
 
 function! UpdateSearchCommands()
-  :command! -nargs=* AgGems execute 'Ag' <q-args> $GEM_PATH
+  :command! -nargs=* AgGems execute 'Ag!' <q-args> $GEM_PATH
   map <c-g> :CtrlP $GEM_PATH
 endfunction
 

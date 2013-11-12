@@ -75,6 +75,8 @@
 
 `:[command] [up-key]` - search for [command]
 
+`:Gsearch [term]` search through the files for term so that it can later be replaced with `:Greplace`
+
 ### Multi-cursors
 
 `<c-n>` select word under cursor, press again to sent the next one, and do regular changes to update all selections
