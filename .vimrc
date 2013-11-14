@@ -129,6 +129,9 @@ filetype plugin on
 filetype plugin indent on
 
 """"""" Plugins customization""""""""""""""""""""""""""""""""""
+" greplace
+set grepprg=ag\ --line-numbers\ --noheading
+
 " easymotion
 let g:EasyMotion_leader_key = '<Leader>'
 hi link EasyMotionTarget ErrorMsg
