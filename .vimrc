@@ -127,11 +127,9 @@ filetype on
 filetype indent on
 filetype plugin on
 filetype plugin indent on
+set grepprg=ag\ --line-numbers\ --noheading " make grepping faster
 
 """"""" Plugins customization""""""""""""""""""""""""""""""""""
-" greplace
-set grepprg=ag\ --line-numbers\ --noheading
-
 " easymotion
 let g:EasyMotion_leader_key = '<Leader>'
 hi link EasyMotionTarget ErrorMsg
