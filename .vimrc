@@ -63,6 +63,8 @@ Bundle 'thinca/vim-fontzoom'
 Bundle 'rbgrouleff/bclose.vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'majutsushi/tagbar'
+Bundle 'bogado/file-line'
 
 augroup filetypedetect
   au BufNewFile,BufRead *.jst.eco    set filetype=jst.html
