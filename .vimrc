@@ -17,7 +17,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
 Bundle 'vim-scripts/ruby-matchit'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-bundler'
@@ -28,6 +28,8 @@ Bundle 'ap/vim-css-color'
 Bundle 'austintaylor/vim-choosecolor'
 Bundle 'mattn/emmet-vim'
 Bundle 'elzr/vim-json'
+Bundle 'evanmiller/nginx-vim-syntax'
+Bundle 'lukaszb/vim-web-indent'
 
 " Searching
 Bundle 'kien/ctrlp.vim'
@@ -68,6 +70,7 @@ Bundle 'bogado/file-line'
 
 augroup filetypedetect
   au BufNewFile,BufRead *.jst.eco    set filetype=jst.html
+  au BufRead,BufNewFile *nginx* set ft=nginx
 augroup END
 
 """""" Buffers """"""""""""""""""""""""""""""""""""""""""""""""""""
@@ -265,7 +268,7 @@ if has('statusline')
   set statusline+=%{fugitive#statusline()} "  Git Hotness
   set statusline+=\ [%{getcwd()}]          " current dir
   set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
+  "set statusline+=%{SyntasticStatuslineFlag()}
   set statusline+=%*
   let g:syntastic_enable_signs=1
   set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
