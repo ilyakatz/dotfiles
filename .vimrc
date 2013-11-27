@@ -70,7 +70,7 @@ Bundle 'bogado/file-line'
 
 augroup filetypedetect
   au BufNewFile,BufRead *.jst.eco    set filetype=jst.html
-  au BufRead,BufNewFile *nginx* set ft=nginx
+  au BufRead,BufNewFile *nginx*      set ft=nginx
 augroup END
 
 """""" Buffers """"""""""""""""""""""""""""""""""""""""""""""""""""
