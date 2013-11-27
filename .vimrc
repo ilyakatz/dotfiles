@@ -132,9 +132,14 @@ filetype on
 filetype indent on
 filetype plugin on
 filetype plugin indent on
-set grepprg=ag\ --line-numbers\ --noheading " make grepping faster
 
 """"""" Plugins customization""""""""""""""""""""""""""""""""""
+" ag
+cabbrev Ag Ag!
+
+" greplace
+let g:grep_cmd_command = 'Ag! --line-numbers --noheading'
+
 " easymotion
 let g:EasyMotion_leader_key = '<Leader>'
 hi link EasyMotionTarget ErrorMsg
