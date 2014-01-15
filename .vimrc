@@ -332,6 +332,10 @@ let g:ragtag_global_maps = 1
 " Override visually selected text
 vmap r "_dP
 
+"http://stackoverflow.com/questions/657447/vim-clear-last-search-highlighting
+"This unsets the 'last search pattern' register by hitting return
+nnoremap <CR> :noh<CR><CR>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 augroup myvimrc
