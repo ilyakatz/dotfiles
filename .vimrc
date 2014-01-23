@@ -74,6 +74,9 @@ augroup filetypedetect
 augroup END
 
 """""" Buffers """"""""""""""""""""""""""""""""""""""""""""""""""""
+map <D-]> :bnext<Return>
+map <D-[> :bprev<Return>
+
 Bundle 'corntrace/bufexplorer'
 " Bundle 'fholgado/minibufxpl.vim'
 " MiniBufExpl Colors
@@ -152,9 +155,6 @@ let g:ctrlp_max_files = 0 " no maximum
 let g:indentLine_color_gui = '#A4E57E'
 let g:indentLine_char = "|"
 
-" blclose
-"nmap <c-w> :Bclose<cr>
-nmap <c-{> :MBEbp<cr>
 
 " vim-session
 let g:session_autosave='yes'
