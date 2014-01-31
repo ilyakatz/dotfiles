@@ -204,9 +204,6 @@ set smarttab "Tab key does indents"
 set shiftwidth=2
 set expandtab
 
-"Tab always indents"
-inoremap <Tab> <Esc>>>i
-vnoremap <Tab> >gv
 vnoremap > >gv
 vnoremap = =gv
 "gv reselects the previous selection"
