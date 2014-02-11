@@ -144,7 +144,6 @@ cabbrev Ag Ag!
 let g:grep_cmd_command = 'Ag! --line-numbers --noheading'
 
 " easymotion
-let g:EasyMotion_leader_key = '<Leader>'
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade  Comment
 
@@ -278,10 +277,10 @@ endif
 
 
 " Rspec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+noremap <Leader>t :call RunCurrentSpecFile()<CR>
+noremap <Leader>s :call RunNearestSpec()<CR>
+noremap <Leader>l :call RunLastSpec()<CR>
+noremap <Leader>a :call RunAllSpecs()<CR>
 
 " macvim doesn't source profile files
 let $PATH=$PATH . ':/usr/local/bin'
