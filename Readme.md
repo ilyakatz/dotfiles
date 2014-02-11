@@ -1,4 +1,3 @@
-
 **bold** indicates insert mode
 
 ### Ruby/Rails
@@ -96,7 +95,10 @@
 #### cntrlp
 `F5` refresh
 
+#### surround
 
+S{ - surround with { -(visual mode)
+ds{ - delete surrounding {
 
 ### NERDTree
 
