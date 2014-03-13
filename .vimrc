@@ -177,6 +177,9 @@ let g:gist_detect_filetype = 1
 
 """"""" End Plugins customization""""""""""""""""""""""""""""""""""
 
+set grepprg=ag
+let g:grep_cmd_opts = '--line-numbers --noheading'
+
 set history=300 "300 lines of history
 set backspace=indent,eol,start "Backspace over autoindent, line breaks, and the start of insert
 set ruler "Show the ruler"
