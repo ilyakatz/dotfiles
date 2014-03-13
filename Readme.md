@@ -44,6 +44,8 @@
 
 `:help [name]` show helptags
 
+`b` go to beginning of current word
+
 ### Navigation
 
 `J` move line down
