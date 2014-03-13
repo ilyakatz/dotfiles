@@ -30,6 +30,10 @@ Bundle 'mattn/emmet-vim'
 Bundle 'elzr/vim-json'
 Bundle 'evanmiller/nginx-vim-syntax'
 Bundle 'lukaszb/vim-web-indent'
+Bundle 'garbas/vim-snipmate'
+Bundle 'kaichen/vim-snipmate-ruby-snippets'
+Bundle 'tomtom/tlib_vim'
+Bundle 'vim-scripts/vim-addon-mw-utils'
 
 " Searching
 Bundle 'kien/ctrlp.vim'
@@ -43,7 +47,7 @@ set wildignore+=*/spec/reports/**
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'jistr/vim-nerdtree-tabs'
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
-nmap <tab> :NERDTreeFind<CR>
+nmap <tab><tab> :NERDTreeFind<CR>
 let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
 let NERDTreeShowBookmarks=1
 
