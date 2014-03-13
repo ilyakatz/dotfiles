@@ -31,7 +31,7 @@ Bundle 'elzr/vim-json'
 Bundle 'evanmiller/nginx-vim-syntax'
 Bundle 'lukaszb/vim-web-indent'
 Bundle 'garbas/vim-snipmate'
-Bundle 'kaichen/vim-snipmate-ruby-snippets'
+Bundle 'honza/vim-snippets'
 Bundle 'tomtom/tlib_vim'
 Bundle 'vim-scripts/vim-addon-mw-utils'
 
