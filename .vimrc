@@ -30,6 +30,10 @@ Bundle 'mattn/emmet-vim'
 Bundle 'elzr/vim-json'
 Bundle 'evanmiller/nginx-vim-syntax'
 Bundle 'lukaszb/vim-web-indent'
+Bundle 'garbas/vim-snipmate'
+Bundle 'kaichen/vim-snipmate-ruby-snippets'
+Bundle 'tomtom/tlib_vim'
+Bundle 'vim-scripts/vim-addon-mw-utils'
 
 " Searching
 Bundle 'kien/ctrlp.vim'
@@ -43,7 +47,7 @@ set wildignore+=*/spec/reports/**
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'jistr/vim-nerdtree-tabs'
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
-nmap <tab> :NERDTreeFind<CR>
+nmap <tab><tab> :NERDTreeFind<CR>
 let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
 let NERDTreeShowBookmarks=1
 
@@ -67,6 +71,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'majutsushi/tagbar'
 Bundle 'bogado/file-line'
+Bundle 'chip/vim-fat-finger'
 
 augroup filetypedetect
   au BufNewFile,BufRead *.jst.eco    set filetype=jst.html
@@ -171,6 +176,9 @@ let g:gist_open_browser_after_post = 1
 let g:gist_detect_filetype = 1
 
 """"""" End Plugins customization""""""""""""""""""""""""""""""""""
+
+set grepprg=ag
+let g:grep_cmd_opts = '--line-numbers --noheading'
 
 set history=300 "300 lines of history
 set backspace=indent,eol,start "Backspace over autoindent, line breaks, and the start of insert
