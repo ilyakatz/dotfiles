@@ -11,7 +11,7 @@ alias gbl="git for-each-ref --count=30 --sort=-committerdate refs/heads/ --forma
 
 
 alias b=bundle
-alias be='BUNDLE_GEMFILE=/Users/ilyakatz/ws/platform/Gemfile.local b exec'
+alias be='b exec'
 alias bec='be cucumber'
 alias ber='be rspec'
 alias bes='be spork'
@@ -26,5 +26,5 @@ alias rc="rails c"
 alias sidekiq="bundle exec sidekiq -q low"
 
 #https://github.com/challengepost/platform/wiki/Setup-Jenkins-CLI
-alias jbuild='cd ~/ws/platform && build/schedule_build.sh -s >& /dev/null & '
+alias jbuild='cd ~/ws/platform && build/schedule_build build  >& /dev/null & '
 
