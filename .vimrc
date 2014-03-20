@@ -143,6 +143,7 @@ filetype plugin indent on
 
 """"""" Plugins customization""""""""""""""""""""""""""""""""""
 " ag
+let g:agprg="ag --column --smart-case"
 cabbrev Ag Ag!
 
 " greplace
