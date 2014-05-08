@@ -56,7 +56,13 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 
+
+#plugins
+~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 source ~/.dev_env
+
+plugins=( zsh-syntax-highlighting )
 
 eval "$(rbenv init -)"
 
