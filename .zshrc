@@ -55,6 +55,9 @@ export PATH=$PATH:/usr/local/mysql/bin
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
+
+source ~/.dev_env
+
 eval "$(rbenv init -)"
 
 ### Added by the Heroku Toolbelt
