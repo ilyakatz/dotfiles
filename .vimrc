@@ -116,7 +116,7 @@ function! SetCurrentGemHome()
 endfunction
 
 function! UpdateSearchCommands()
-  :command! -nargs=* AgGems execute 'Ag!' <q-args> $GEM_PATH
+  :command! -nargs=* AgGems execute 'Ag!' --smart-case <q-args> $GEM_PATH
   map <c-g> :CtrlP $GEM_PATH
 endfunction
 
