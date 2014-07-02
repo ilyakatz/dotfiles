@@ -46,6 +46,10 @@
 
 `b` go to beginning of current word
 
+`cntrl-v` select columns
+
+`[num]V` select _num_ lines
+
 ### Navigation
 
 `J` move line down
