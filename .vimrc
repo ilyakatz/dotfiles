@@ -102,7 +102,6 @@ autocmd BufReadPost *
 " Remember info about open buffers on close
 set viminfo^=%
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " annoying messages, use for debugging only
 ":mess
@@ -172,7 +171,6 @@ let g:ctrlp_max_files = 0 " no maximum
 let g:indentLine_color_gui = '#A4E57E'
 let g:indentLine_char = "|"
 
-
 " vim-session
 let g:session_autosave='yes'
 let g:session_autoload='prompt'
@@ -234,7 +232,6 @@ set noerrorbells                  " no beeping please
 "set backupdir=$HOME/.vim/tmp      " keep backup files in one location
 set noswapfile                    " don't use swp files
 
-
 " custom syntax highlighting
 au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
 
@@ -252,7 +249,6 @@ command! W w " Bind :W to :w
 command! Q q " Bind :Q to :q
 command! Qall qall
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
@@ -264,8 +260,6 @@ nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
 "    :map <Leader>A  oanother line <Esc>
 "Works like:
 "    :map \A  oanother line <Esc>
-
-
 
 " autosave
 :au FocusLost * :wa
@@ -295,7 +289,6 @@ if has('statusline')
   let g:syntastic_enable_signs=1
   set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 endif
-
 
 " Rspec.vim mappings
 noremap <Leader>t :call RunCurrentSpecFile()<CR>
@@ -353,7 +346,6 @@ vmap r "_dP
 "This unsets the 'last search pattern' register by hitting return
 nnoremap <CR> :noh<CR><CR>
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 augroup myvimrc
   au!
@@ -368,7 +360,6 @@ augroup myvimrc
   endif
   au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so  $rcfile
 augroup END
-
 
 """""" Preview current file in browser with highlighting """"""""""
 " :TOhtml
