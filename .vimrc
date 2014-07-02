@@ -235,9 +235,6 @@ set noswapfile                    " don't use swp files
 " custom syntax highlighting
 au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,bluepill.pill,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
 
-" auto strip whitespace when saving
-autocmd BufWritePre * :%s/\s\+$//e
-
 " indent the whole file
 map <silent> <F5> mmgg=G'm
 imap <silent> <F5> <Esc> mmgg=G'm
