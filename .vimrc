@@ -78,6 +78,8 @@ augroup filetypedetect
   au BufRead,BufNewFile *nginx*      set ft=nginx
 augroup END
 
+au BufWritePre * :silent call StripTrailingWhitespace()
+
 """""" Buffers """"""""""""""""""""""""""""""""""""""""""""""""""""
 map <D-]> :bnext<Return>
 map <D-[> :bprev<Return>
@@ -127,6 +129,16 @@ function! UpdateGemPath()
   let $GEM_PATH=join([$GEM_PREFIX, "gemsets",$GEMSET_NAME],"/")
   let $GEM_PATH = substitute($GEM_PATH,"[\n|\r]*","","g")
 endfunction
+
+"Borrowed from https://github.com/jcmuller/myvimconfig
+func! StripTrailingWhitespace()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e          " Remove trailing white space
+  %s/\n\{3,}/\r\r/e    " Condense multiple empty lines into one
+  " %s#\($\n\s*\)\+\%$## " Only one newline char at EOF
+  call cursor(l, c)
+endf
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
