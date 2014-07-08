@@ -17,8 +17,8 @@ alias ber='be rspec'
 alias bes='be spork'
 alias besc='bes cucumber'
 alias besr='bes rspec'
-alias cuc='spring cucumber'
-alias spec='spring rspec'
+alias cuc='cucumber'
+alias spec='rspec'
 alias fs='foreman start'
 
 #rails
