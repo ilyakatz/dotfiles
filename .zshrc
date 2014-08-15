@@ -62,7 +62,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=$PATH:/Applications/MacVim
 
 #plugins
-~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source ~/.dev_env
 
