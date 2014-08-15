@@ -8,54 +8,56 @@ call vundle#rc()
 "
 Bundle 'gmarik/vundle'
 
-" Frameworks and languages
-Bundle 'othree/html5.vim'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-ragtag'
-Bundle 'vim-scripts/ruby-matchit'
-Bundle 'vim-ruby/vim-ruby'
-"Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-rbenv'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'briancollins/vim-jst'
-Bundle 'ap/vim-css-color'
-Bundle 'austintaylor/vim-choosecolor'
-Bundle 'mattn/emmet-vim'
-Bundle 'elzr/vim-json'
-Bundle 'evanmiller/nginx-vim-syntax'
-Bundle 'lukaszb/vim-web-indent'
-Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
-Bundle 'tomtom/tlib_vim'
-Bundle 'vim-scripts/vim-addon-mw-utils'
+if has('gui_running')
+  " Frameworks and languages
+  Bundle 'othree/html5.vim'
+  Bundle 'thoughtbot/vim-rspec'
+  Bundle 'tpope/vim-rails.git'
+  Bundle 'tpope/vim-cucumber'
+  Bundle 'tpope/vim-surround'
+  Bundle 'tpope/vim-ragtag'
+  Bundle 'vim-scripts/ruby-matchit'
+  Bundle 'vim-ruby/vim-ruby'
+  "Bundle 'scrooloose/syntastic'
+  Bundle 'scrooloose/nerdcommenter'
+  Bundle 'tpope/vim-endwise'
+  Bundle 'tpope/vim-bundler'
+  Bundle 'tpope/vim-rbenv'
+  Bundle 'kchmck/vim-coffee-script'
+  Bundle 'briancollins/vim-jst'
+  Bundle 'ap/vim-css-color'
+  Bundle 'austintaylor/vim-choosecolor'
+  Bundle 'mattn/emmet-vim'
+  Bundle 'elzr/vim-json'
+  Bundle 'evanmiller/nginx-vim-syntax'
+  Bundle 'lukaszb/vim-web-indent'
+  Bundle 'garbas/vim-snipmate'
+  Bundle 'honza/vim-snippets'
+  Bundle 'tomtom/tlib_vim'
+  Bundle 'vim-scripts/vim-addon-mw-utils'
 
-" Searching
-Bundle 'kien/ctrlp.vim'
-Bundle 'rking/ag.vim'
-Bundle 'skwp/greplace.vim'
-Bundle 'qstrahl/vim-matchmaker'
-Bundle 'vim-scripts/gitignore'
-set wildignore+=*/spec/reports/**
+  " Searching
+  Bundle 'kien/ctrlp.vim'
+  Bundle 'rking/ag.vim'
+  Bundle 'skwp/greplace.vim'
+  Bundle 'qstrahl/vim-matchmaker'
+  Bundle 'vim-scripts/gitignore'
+  set wildignore+=*/spec/reports/**
 
-" Project structure
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'jistr/vim-nerdtree-tabs'
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
-nmap <tab><tab> :NERDTreeFind<CR>
-let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
-let NERDTreeShowBookmarks=1
+  " Project structure
+  Bundle 'scrooloose/nerdtree.git'
+  Bundle 'jistr/vim-nerdtree-tabs'
+  map <Leader>n <plug>NERDTreeTabsToggle<CR>
+  nmap <tab><tab> :NERDTreeFind<CR>
+  let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
+  let NERDTreeShowBookmarks=1
 
-" VCS
-Bundle 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
+  " VCS
+  Bundle 'airblade/vim-gitgutter'
+  Bundle 'tpope/vim-fugitive.git'
+  Bundle 'mattn/webapi-vim'
+  Bundle 'mattn/gist-vim'
+endif
 
 " Vim environment
 Bundle 'altercation/vim-colors-solarized'
@@ -107,27 +109,30 @@ set viminfo^=%
 ":mess
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" update various search commands to be able to search through the gem files
-:autocmd BufEnter * call SetCurrentGemHome()
+if has('gui_running')
+  " update various search commands to be able to search through the gem files
+  :autocmd BufEnter * call SetCurrentGemHome()
 
-function! SetCurrentGemHome()
-  "echom "in SetCurrentGemHome"
-  call UpdateGemPath()
-  call UpdateSearchCommands()
-endfunction
+  function! SetCurrentGemHome()
+    "echom "in SetCurrentGemHome"
+    call UpdateGemPath()
+    call UpdateSearchCommands()
+  endfunction
 
-function! UpdateSearchCommands()
-  :command! -nargs=* AgGems execute 'Ag!' --smart-case <q-args> $GEM_PATH
-  map <c-g> :CtrlP $GEM_PATH
-endfunction
+  function! UpdateSearchCommands()
+    :command! -nargs=* AgGems execute 'Ag!' --smart-case <q-args> $GEM_PATH
+    map <c-g> :CtrlP $GEM_PATH
+  endfunction
 
-function! UpdateGemPath()
-  let $GEM_PREFIX=system("rbenv prefix")
-  let $GEMSET_FILE_NAME=system("rbenv gemset file")
-  let $GEMSET_NAME=system("cat " . $GEMSET_FILE_NAME)
-  let $GEM_PATH=join([$GEM_PREFIX, "gemsets",$GEMSET_NAME],"/")
-  let $GEM_PATH = substitute($GEM_PATH,"[\n|\r]*","","g")
-endfunction
+  function! UpdateGemPath()
+    let $GEM_PREFIX=system("rbenv prefix")
+    let $GEMSET_FILE_NAME=system("rbenv gemset file")
+    let $GEMSET_NAME=system("cat " . $GEMSET_FILE_NAME)
+    let $GEM_PATH=join([$GEM_PREFIX, "gemsets",$GEMSET_NAME],"/")
+    let $GEM_PATH = substitute($GEM_PATH,"[\n|\r]*","","g")
+  endfunction
+
+endif
 
 "Borrowed from https://github.com/jcmuller/myvimconfig
 func! StripTrailingWhitespace()
@@ -278,7 +283,11 @@ if has('statusline')
   " Broken down into easily includeable segments
   set statusline=%<%f\    " Filename
   set statusline+=%w%h%m%r " Options
-  set statusline+=%{fugitive#statusline()} "  Git Hotness
+
+  if has('gui_running')
+    set statusline+=%{fugitive#statusline()} "  Git Hotness
+  endif
+
   set statusline+=\ [%{getcwd()}]          " current dir
   set statusline+=%#warningmsg#
   "set statusline+=%{SyntasticStatuslineFlag()}
