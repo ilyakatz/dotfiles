@@ -310,6 +310,10 @@ let $PATH=$PATH . ':/usr/local/bin'
 imap <S-Tab> <Esc><<i
 nmap <S-tab> <<
 
+" http://stackoverflow.com/questions/442302/tabbing-visual-selection-in-vim
+vmap <Tab> >gv
+vmap <S-Tab> <gv
+
 " Show tabs and trailing spaces "
 set list listchars=tab:→\ ,trail:·
 
