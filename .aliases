@@ -9,7 +9,6 @@ alias gp='git push'
 alias gs='git status'
 alias gbl="git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(committerdate:short) | %(authorname) | %(refname:short)'"
 
-
 alias b=bundle
 alias be='b exec'
 alias bec='be cucumber'
@@ -20,6 +19,10 @@ alias besr='bes rspec'
 alias cuc='cucumber'
 alias spec='rspec'
 alias fs='foreman start'
+alias sspec='spring rspec'
+
+alias bundle='nocorrect bundle'
+alias spring='nocorrect spring'
 
 #rails
 alias rc="rails c"
