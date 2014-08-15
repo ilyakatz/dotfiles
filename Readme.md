@@ -18,6 +18,8 @@
 
 `\ci` - toggle commented lines
 
+`vat` - select all text with the curret indentation
+
 ### Github
 `:Gist` create public gist
 
