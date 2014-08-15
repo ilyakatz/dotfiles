@@ -1,5 +1,5 @@
-# Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+# Path to your oh-my-zsh configuration.
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -47,8 +47,11 @@ source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 
 set -o vi
-export EDITOR=vi
+export EDITOR=vim
 export BUNDLER_EDITOR=mvim
+export GIT_EDITOR=vim
+export VISUAL=vim
+export EDITOR=vim
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/opt/local/bin:/opt/local/sbin:
 export PATH=$PATH:/usr/local/mysql/bin
