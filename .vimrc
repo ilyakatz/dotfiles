@@ -339,11 +339,6 @@ if has("mac") || has("macunix")
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" vim-fontzoom
-"shift-minus to decrease size
-nmap _ -
-
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
