@@ -326,6 +326,10 @@ nnoremap <C-k> :m .-2<CR>==
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+"""""""Convert snake case to camel case """""""""""""""""""""
+" http://vim.wikia.com/wiki/Converting_variables_to_or_from_camel_case
+nnoremap _ f_x~
+
 " http://amix.dk/vim/vimrc.html
 if has("mac") || has("macunix")
   nmap <D-j> <C-j>

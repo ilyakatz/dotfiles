@@ -22,6 +22,8 @@
 
 `<C-x>,` - emmet expension
 
+`_` - convert next occurrence of `_` in snake_case to CamelCase
+
 ### Github
 `:Gist` create public gist
 
