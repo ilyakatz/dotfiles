@@ -116,6 +116,8 @@ set viminfo^=%
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('gui_running')
+  autocmd FileType sass,scss,stylus syn cluster sassCssAttributes add=@cssColors
+
   " update various search commands to be able to search through the gem files
   :autocmd BufEnter * call SetCurrentGemHome()
 
