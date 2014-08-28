@@ -12,7 +12,12 @@ if has('gui_running')
   " Frameworks and languages
   Bundle 'othree/html5.vim'
   Bundle 'thoughtbot/vim-rspec'
+
   Bundle 'tpope/vim-rails.git'
+  " vim-rails
+  command! Ec Econtroller
+  command! Ev Eview
+
   Bundle 'tpope/vim-cucumber'
   Bundle 'tpope/vim-surround'
   Bundle 'tpope/vim-ragtag'
@@ -182,10 +187,6 @@ let g:session_autoload='prompt'
 let g:session_default_overwrite=1
 let g:session_default_name="project"
 let g:session_default_to_last=1
-
-" vim-rails
-command! Ec Econtroller
-command! Ev Eview
 
 " gist-vim
 let g:gist_open_browser_after_post = 1
