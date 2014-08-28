@@ -102,15 +102,6 @@ map <D-]> :bnext<Return>
 map <D-[> :bprev<Return>
 
 Bundle 'corntrace/bufexplorer'
-" Bundle 'fholgado/minibufxpl.vim'
-" MiniBufExpl Colors
-" hi MBENormal               guifg=#F1266F guibg=fg
-" hi MBEChanged              guifg=#CD5907 guibg=fg
-" hi MBEVisibleNormal        guifg=#5DC2D6 guibg=fg
-" hi MBEVisibleChanged       guifg=#F1266F guibg=fg
-" hi MBEVisibleActiveNormal  guifg=#295cdb guibg=fg
-" hi MBEVisibleActiveChanged guifg=#F1266F guibg=fg
-
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
       \ if line("'\"") > 0 && line("'\"") <= line("$") |
