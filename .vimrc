@@ -88,10 +88,12 @@ Bundle 'majutsushi/tagbar'
 Bundle 'bogado/file-line'
 Bundle 'chip/vim-fat-finger'
 
-augroup filetypedetect
-  au BufNewFile,BufRead *.jst.eco    set filetype=jst.html
-  au BufRead,BufNewFile *nginx*      set ft=nginx
-augroup END
+if has('gui_running')
+  augroup filetypedetect
+    au BufNewFile,BufRead *.jst.eco    set filetype=jst.html
+    au BufRead,BufNewFile *nginx*      set ft=nginx
+  augroup END
+endif
 
 au BufWritePre * :silent call StripTrailingWhitespace()
 
