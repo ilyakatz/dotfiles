@@ -66,9 +66,9 @@
 
 `:ChooseColor` open colorpicker
 
-`<Leader>w activate easy motion
+`\\w` activate easy motion
 
-`<Leader>f{char}` activate easy motion for a given {char}
+`\\f{char}` activate easy motion for a given {char}
 
 `:Ag! "stuff"` search for "stuff"
 
