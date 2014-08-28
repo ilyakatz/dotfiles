@@ -48,8 +48,12 @@ if has('gui_running')
   " Searching
   Bundle 'kien/ctrlp.vim'
   Bundle 'rking/ag.vim'
+
   Bundle 'skwp/greplace.vim'
-  Bundle 'qstrahl/vim-matchmaker'
+  set grepprg=ag
+  let g:grep_cmd_opts = '--line-numbers --noheading'
+
+  "Bundle 'qstrahl/vim-matchmaker'
   Bundle 'vim-scripts/gitignore'
   set wildignore+=*/spec/reports/**
 
@@ -197,9 +201,6 @@ let g:gist_open_browser_after_post = 1
 let g:gist_detect_filetype = 1
 
 """"""" End Plugins customization""""""""""""""""""""""""""""""""""
-
-set grepprg=ag
-let g:grep_cmd_opts = '--line-numbers --noheading'
 
 set history=300 "300 lines of history
 set backspace=indent,eol,start "Backspace over autoindent, line breaks, and the start of insert
