@@ -32,7 +32,11 @@ if has('gui_running')
   Bundle 'briancollins/vim-jst'
   Bundle 'ap/vim-css-color'
   Bundle 'austintaylor/vim-choosecolor'
+  " provides support for expanding abbreviations
   Bundle 'mattn/emmet-vim'
+  " Ctrl-x, will expand emmet fast typing
+  let g:user_emmet_leader_key='<C-x>'
+
   Bundle 'elzr/vim-json'
   Bundle 'evanmiller/nginx-vim-syntax'
   Bundle 'lukaszb/vim-web-indent'

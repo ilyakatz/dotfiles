@@ -20,6 +20,8 @@
 
 `vat` - select all text with the curret indentation
 
+`<C-x>,` - emmet expension
+
 ### Github
 `:Gist` create public gist
 
