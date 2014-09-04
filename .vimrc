@@ -383,3 +383,18 @@ augroup END
 silent !mkdir ~/.vim/backups > /dev/null 2>&1
 set undodir=~/.vim/backups
 set undofile
+
+" Folding
+if has('gui_running')
+  " Space to toggle folds.
+  nnoremap <Space> za
+
+  " http://vi-improved.org/vimrc.html
+  set foldlevel=100 " Don't autofold anything (but I can still fold manually)
+
+  "https://github.com/sjl/dotfiles/blob/eea18b00b8c74943f5094fddf91d3c2a7e0a7242/vim/vimrc#L534
+  augroup ft_ruby
+    au!
+    au Filetype ruby setlocal foldmethod=syntax
+  augroup END
+endif
