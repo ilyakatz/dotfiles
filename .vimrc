@@ -197,9 +197,6 @@ let g:gist_detect_filetype = 1
 
 """"""" End Plugins customization""""""""""""""""""""""""""""""""""
 
-"http://unix.stackexchange.com/questions/110599/vim-avoid-selecting-underscore
-set iskeyword-=_
-
 set history=300 "300 lines of history
 set backspace=indent,eol,start "Backspace over autoindent, line breaks, and the start of insert
 set ruler "Show the ruler"
