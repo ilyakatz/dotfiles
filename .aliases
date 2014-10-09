@@ -7,7 +7,7 @@ alias gma='git commit -am'
 alias gm='git commit -m'
 alias gp='git push'
 alias gs='git status'
-alias gbl="git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(committerdate:short) | %(authorname) | %(refname:short)'"
+alias gbl="git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(committerdate:short) | %(authorname) | %(refname:short)'"
 
 alias b=bundle
 alias be='b exec'
@@ -18,7 +18,7 @@ alias besc='bes cucumber'
 alias besr='bes rspec'
 alias cuc='cucumber'
 alias spec='rspec'
-alias fs='foreman start'
+alias fs='RAILS_ENV=development foreman start'
 alias sspec='spring rspec'
 
 alias bundle='nocorrect bundle'
