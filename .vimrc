@@ -1,8 +1,14 @@
 "https://github.com/skwp/dotfiles/blob/master/vim/vundles.vim
 "
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+call pathogen#infect()
+
+"
 " let Vundle manage Vundle
 "  " required!
 "
@@ -64,6 +70,7 @@ if has('gui_running')
   nmap <tab><tab> :NERDTreeFind<CR>
   let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
   let NERDTreeShowBookmarks=1
+  au VimEnter *  NERDTree ~/ws
 
   " VCS
   Bundle 'airblade/vim-gitgutter'
@@ -119,7 +126,7 @@ if has('gui_running')
   autocmd FileType sass,scss,stylus syn cluster sassCssAttributes add=@cssColors
 
   " update various search commands to be able to search through the gem files
-  :autocmd BufEnter * call SetCurrentGemHome()
+  " :autocmd BufEnter * call SetCurrentGemHome()
 
   function! SetCurrentGemHome()
     "echom "in SetCurrentGemHome"
@@ -398,3 +405,6 @@ if has('gui_running')
     au Filetype ruby setlocal foldmethod=syntax
   augroup END
 endif
+
+call vundle#end()            " required
+filetype plugin indent on    " required
