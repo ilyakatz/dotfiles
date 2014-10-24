@@ -1,5 +1,5 @@
-alias gist='nocorrect gist'j
 alias gitl='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an, %cr)%Creset'\'' --abbrev-commit --date=relative'
+alias gist='nocorrect gist'j
 alias gitls='gitl --max-count=5'
 alias grm='git ls-files --deleted | xargs git rm'
 alias gpr='git pull --rebase'
@@ -20,6 +20,9 @@ alias cuc='cucumber'
 alias spec='rspec'
 alias fs='RAILS_ENV=development foreman start'
 alias sspec='spring rspec'
+
+alias ss='heroku run rails c -a farmivore-staging'
+alias sp='heroku run rails c -a farmivore-prod'
 
 alias bundle='nocorrect bundle'
 alias spring='nocorrect spring'
