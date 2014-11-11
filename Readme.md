@@ -56,6 +56,10 @@
 
 `[num]V` select _num_ lines
 
+`:TOhtml` create HTML repsentation from the current file (with formatting)
+
+`:!open %` open current file in browser
+
 ### Navigation
 
 `J` move line down
