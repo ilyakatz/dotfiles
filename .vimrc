@@ -406,5 +406,8 @@ if has('gui_running')
   augroup END
 endif
 
+" Convert buffers to html
+let g:html_number_lines = 0
+
 call vundle#end()            " required
 filetype plugin indent on    " required
