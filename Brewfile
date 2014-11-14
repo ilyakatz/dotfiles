@@ -11,3 +11,6 @@ install ruby-build
 install rbenv-gemset
 install ag
 install aspell
+install phantomjs
+install libxml2 libxslt
+install python
