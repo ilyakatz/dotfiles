@@ -8,6 +8,7 @@ alias gm='git commit -m'
 alias gp='git push'
 alias gs='git status'
 alias gbl="git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(committerdate:short) | %(authorname) | %(refname:short)'"
+alias gbll="git for-each-ref --count=100 --sort=-committerdate refs/heads/ --format='%(committerdate:short) | %(authorname) | %(refname:short)'"
 
 alias b=bundle
 alias be='b exec'
