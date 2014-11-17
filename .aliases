@@ -18,11 +18,9 @@ alias besc='bes cucumber'
 alias besr='bes rspec'
 alias cuc='cucumber'
 alias spec='rspec'
+alias rspec='be rspec'
 alias fs='RAILS_ENV=development foreman start'
 alias sspec='spring rspec'
-
-alias ss='heroku run rails c -a farmivore-staging'
-alias sp='heroku run rails c -a farmivore-prod'
 
 alias bundle='nocorrect bundle'
 alias spring='nocorrect spring'
@@ -34,3 +32,6 @@ alias sidekiq="bundle exec sidekiq -q low"
 #https://github.com/challengepost/platform/wiki/Setup-Jenkins-CLI
 alias jbuild='cd ~/ws/platform && build/schedule_build build  >& /dev/null & '
 
+#ssh
+alias app1="tabc Production; ssh app1; tabc"
+alias staging="tabc Staging; ssh staging; tabc"

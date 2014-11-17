@@ -74,3 +74,4 @@ eval "$(rbenv init -)"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export CLICOLOR=1
+source ~/.sshrc
