@@ -92,7 +92,7 @@
 
 `:Gsearch [term]` search through the files for term so that it can later be replaced with `:Greplace`
 
-`:TagbarToggle` - shows the structure of a file based on ctags
+`:Tagbar` - shows/hide the structure of a file based on ctags
 
 ### Multi-cursors
 
