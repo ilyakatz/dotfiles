@@ -13,7 +13,7 @@ call pathogen#infect()
 " let Vundle manage Vundle
 "  " required!
 "
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle'
 
 if has('gui_running')
   " Frameworks and languages
