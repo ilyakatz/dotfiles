@@ -1,4 +1,5 @@
 "https://github.com/skwp/dotfiles/blob/master/vim/vundles.vim
+"http://vimawesome.com/
 "
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -94,6 +95,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'majutsushi/tagbar'
 Bundle 'bogado/file-line'
 Bundle 'chip/vim-fat-finger'
+Bundle 'Townk/vim-autoclose'
 
 if has('gui_running')
   augroup filetypedetect
