@@ -78,10 +78,12 @@ if has('gui_running')
   Bundle 'tpope/vim-fugitive.git'
   Bundle 'mattn/webapi-vim'
   Bundle 'mattn/gist-vim'
+
+  "Vim environment
+  Bundle 'altercation/vim-colors-solarized'
 endif
 
 " Vim environment
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'waylan/vim-markdown-extra-preview'
 Bundle 'nelstrom/vim-markdown-preview'
 Bundle 'Valloric/YouCompleteMe'
