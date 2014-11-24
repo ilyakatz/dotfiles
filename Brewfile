@@ -14,3 +14,9 @@ install aspell
 install phantomjs
 install libxml2 libxslt
 install python
+install nginx
+
+brew tap phinze/homebrew-cask && brew install brew-cask
+
+brew cask install openoffice
+
