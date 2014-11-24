@@ -66,12 +66,10 @@ if has('gui_running')
 
   " Project structure
   Bundle 'scrooloose/nerdtree.git'
-  Bundle 'jistr/vim-nerdtree-tabs'
   map <Leader>n <plug>NERDTreeTabsToggle<CR>
   nmap <tab><tab> :NERDTreeFind<CR>
   let g:NERDTreeChDirMode=2 "update CWD when changing nerdtree directories
   let NERDTreeShowBookmarks=1
-  au VimEnter *  NERDTree ~/ws
 
   " VCS
   Bundle 'airblade/vim-gitgutter'
@@ -81,6 +79,13 @@ if has('gui_running')
 
   "Vim environment
   Bundle 'altercation/vim-colors-solarized'
+
+  Bundle 'xolox/vim-session'
+  let g:session_autoload='yes'
+  let g:session_autosave = 'yes'
+  let g:session_default_to_last=1
+  let g:session_autosave_periodic=1
+  let g:session_verbose_messages=0
 endif
 
 " Vim environment
@@ -88,7 +93,7 @@ Bundle 'waylan/vim-markdown-extra-preview'
 Bundle 'nelstrom/vim-markdown-preview'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'Yggdroot/indentLine'
-Bundle 'xolox/vim-session'
+
 Bundle 'xolox/vim-misc'
 Bundle 'thinca/vim-fontzoom'
 Bundle 'rbgrouleff/bclose.vim'
@@ -194,13 +199,6 @@ let g:ctrlp_max_files = 0 " no maximum
 " indentLine
 let g:indentLine_color_gui = '#A4E57E'
 let g:indentLine_char = "|"
-
-" vim-session
-let g:session_autosave='yes'
-let g:session_autoload='prompt'
-let g:session_default_overwrite=1
-let g:session_default_name="project"
-let g:session_default_to_last=1
 
 " gist-vim
 let g:gist_open_browser_after_post = 1
