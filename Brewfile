@@ -15,6 +15,7 @@ install phantomjs
 install libxml2 libxslt
 install python
 install nginx
+install macvim
 
 tap 'caskroom/cask'
 install 'brew-cask'
@@ -24,12 +25,10 @@ cask install viber
 cask install virtualbox
 cask install firefox
 cask install evernote
-cask install divvy
 cask install livereload
 cask install google-chrome
 cask install adium
 cask install flux
-cask install macvim
 cask install skype
 cask install joinme
 cask install gpgtools
