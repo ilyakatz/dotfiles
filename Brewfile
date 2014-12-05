@@ -16,21 +16,22 @@ install libxml2 libxslt
 install python
 install nginx
 
-brew tap phinze/homebrew-cask && brew install brew-cask
+tap 'caskroom/cask'
+install 'brew-cask'
 
-brew cask install openoffice
-brew cask install viber
-brew cask install virtualbox
-brew cask install firefox
-brew cask install evernote
-brew cask install divvy
-brew cask install livereload
-brew cask install google-chrome
-brew cask install adium
-brew cask install flux
-brew cask install macvim
-brew cask install skype
-brew cask install joinme
-brew cask install gpgtools
+cask install openoffice
+cask install viber
+cask install virtualbox
+cask install firefox
+cask install evernote
+cask install divvy
+cask install livereload
+cask install google-chrome
+cask install adium
+cask install flux
+cask install macvim
+cask install skype
+cask install joinme
+cask install gpgtools
 
-https://developer.apple.com/downloads/index.action?name=for%20Xcode%20-#
+#https://developer.apple.com/downloads/index.action?name=for%20Xcode%20-#
