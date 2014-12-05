@@ -19,4 +19,4 @@ install nginx
 brew tap phinze/homebrew-cask && brew install brew-cask
 
 brew cask install openoffice
-
+brew cask install cyberduck
