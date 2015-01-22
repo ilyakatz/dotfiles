@@ -15,8 +15,23 @@ install phantomjs
 install libxml2 libxslt
 install python
 install nginx
+install macvim
 
-brew tap phinze/homebrew-cask && brew install brew-cask
+tap 'caskroom/cask'
+install 'brew-cask'
 
-brew cask install openoffice
-brew cask install cyberduck
+cask install cyberduck
+cask install openoffice
+cask install viber
+cask install virtualbox
+cask install firefox
+cask install evernote
+cask install livereload
+cask install google-chrome
+cask install adium
+cask install flux
+cask install skype
+cask install joinme
+cask install gpgtools
+
+#https://developer.apple.com/downloads/index.action?name=for%20Xcode%20-#
