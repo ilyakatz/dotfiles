@@ -121,3 +121,7 @@ ds{ - delete surrounding {
 `m` go to the parent directory
 
 `C` - change the root directory to current directory
+
+`s ` - open in split windows
+
+`Ctrl-W r ` - move window to the right
