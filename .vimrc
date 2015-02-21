@@ -107,6 +107,8 @@ if has('gui_running')
   augroup filetypedetect
     au BufNewFile,BufRead *.jst.eco    set filetype=jst.html
     au BufRead,BufNewFile *nginx*      set ft=nginx
+    " http://stackoverflow.com/questions/8671046/vim-folding-syntax-for-scss
+    au BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
   augroup END
 endif
 
