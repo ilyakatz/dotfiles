@@ -408,6 +408,6 @@ if has('gui_running')
 endif
 
 " Convert buffers to html
-let g:html_number_lines = 0
+let g:html_number_lines = 1
 
 filetype plugin indent on    " required
