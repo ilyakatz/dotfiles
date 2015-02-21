@@ -5,15 +5,14 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-call pathogen#infect()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 "
 " let Vundle manage Vundle
 "  " required!
 "
-Bundle 'gmarik/Vundle'
+Bundle 'gmarik/vundle'
 
 if has('gui_running')
   " Frameworks and languages
@@ -411,5 +410,4 @@ endif
 " Convert buffers to html
 let g:html_number_lines = 0
 
-call vundle#end()            " required
 filetype plugin indent on    " required
