@@ -1,5 +1,5 @@
-install aspell
 install git
+install aspell
 install redis
 install rbenv
 install ctags
@@ -23,6 +23,7 @@ install 'brew-cask'
 # brew versions
 tap Homebrew/homebrew-versions
 
+cask install cyberduck
 cask install openoffice
 cask install viber
 cask install virtualbox
@@ -37,3 +38,5 @@ cask install joinme
 cask install gpgtools
 
 #https://developer.apple.com/downloads/index.action?name=for%20Xcode%20-#
+#TrackballWorks 1.2 for Mac
+
