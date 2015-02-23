@@ -20,6 +20,9 @@ install macvim
 tap 'caskroom/cask'
 install 'brew-cask'
 
+# brew versions
+tap Homebrew/homebrew-versions
+
 cask install openoffice
 cask install viber
 cask install virtualbox
