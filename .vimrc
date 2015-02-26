@@ -101,7 +101,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'majutsushi/tagbar'
 Bundle 'bogado/file-line'
 Bundle 'chip/vim-fat-finger'
-Bundle 'Townk/vim-autoclose'
+Bundle 'jiangmiao/auto-pairs'
 
 if has('gui_running')
   augroup filetypedetect
