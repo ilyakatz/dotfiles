@@ -109,6 +109,7 @@ if has('gui_running')
     au BufRead,BufNewFile *nginx*      set ft=nginx
     " http://stackoverflow.com/questions/8671046/vim-folding-syntax-for-scss
     au BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
+    au BufRead,BufNewFile *.js setlocal foldmethod=marker foldmarker={,}
   augroup END
 endif
 
