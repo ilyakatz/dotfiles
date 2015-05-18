@@ -53,6 +53,8 @@ if has('gui_running')
 
   " Searching
   Bundle 'kien/ctrlp.vim'
+  let g:ctrlp_cmd = 'CtrlPMixed'
+
   Bundle 'rking/ag.vim'
 
   Bundle 'skwp/greplace.vim'
