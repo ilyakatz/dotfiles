@@ -24,6 +24,8 @@
 
 `_` - convert next occurrence of `_` in snake_case to CamelCase
 
+`:Tagbar` - show a list of methods
+
 ### Github
 `:Gist` create public gist
 
