@@ -410,10 +410,10 @@ endif
 let g:html_number_lines = 1
 
 " https://github.com/rudylee/dotfiles/blob/master/vimrc
-" Highlight the code when it's more than 80 characters
+" Highlight the code when it's more than 100 characters
 augroup vimrc_autocmds
   autocmd BufEnter * highlight OverLength ctermbg=red ctermfg=white guibg=#d6dfe6
-  autocmd BufEnter * match OverLength /\%81v.\+/
+  autocmd BufEnter * match OverLength /\%101v.\+/
 augroup END
 
 filetype plugin indent on    " required
