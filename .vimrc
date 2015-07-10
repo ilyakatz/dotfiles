@@ -78,6 +78,9 @@ if has('gui_running')
 
   "Vim environment
   Bundle 'altercation/vim-colors-solarized'
+  let g:buf_report_autosave_periodic = 60
+  let g:buf_report_autosave_dir = $HOME. "/buftimer"
+  Bundle 'chrisbra/BufTimer'
 
   Bundle 'xolox/vim-session'
   let g:session_autoload='yes'
