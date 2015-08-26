@@ -17,9 +17,14 @@
 
 verify_plugin_signatures: false
 PreCommit:
-#  RuboCop:
-#    enabled: true
-#    on_warn: fail # Treat all warnings as failures
+   Brakeman:
+    enabled: true
+
+   RuboCop:
+     enabled: true
+     command: ['rubocop', '-c', '.ruby-style.yml']
+     on_warn: fail # Treat all warnings as failures
+     problem_on_unmodified_line: ignore
 
    MasterNoNo:
      enabled: true
