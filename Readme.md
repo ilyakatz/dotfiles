@@ -127,3 +127,11 @@ ds{ - delete surrounding {
 `s ` - open in split windows
 
 `Ctrl-W r ` - move window to the right
+
+### vim: Column insert
+1. move to the position
+1. enter column visual mode `CTRL+v`
+1. select the column
+1. enter into column insert mode `shift+i`
+1. insert the text
+1. type `Esc`
