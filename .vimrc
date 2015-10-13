@@ -90,12 +90,12 @@ if has('gui_running')
   let g:session_default_to_last=1
   let g:session_autosave_periodic=1
   let g:session_verbose_messages=0
+  Bundle 'Valloric/YouCompleteMe'
 endif
 
 " Vim environment
 Bundle 'waylan/vim-markdown-extra-preview'
 Bundle 'nelstrom/vim-markdown-preview'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'Yggdroot/indentLine'
 
 Bundle 'xolox/vim-misc'
