@@ -90,12 +90,12 @@ if has('gui_running')
   let g:session_default_to_last=1
   let g:session_autosave_periodic=1
   let g:session_verbose_messages=0
+  Bundle 'Valloric/YouCompleteMe'
 endif
 
 " Vim environment
 Bundle 'waylan/vim-markdown-extra-preview'
 Bundle 'nelstrom/vim-markdown-preview'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'Yggdroot/indentLine'
 
 Bundle 'xolox/vim-misc'
@@ -422,9 +422,11 @@ let g:html_number_lines = 1
 
 " https://github.com/rudylee/dotfiles/blob/master/vimrc
 " Highlight the code when it's more than 80 characters
-augroup vimrc_autocmds
-  autocmd BufEnter * highlight OverLength ctermbg=red ctermfg=white guibg=#d6dfe6
-  autocmd BufEnter * match OverLength /\%81v.\+/
-augroup END
+if has('gui_running')
+  augroup vimrc_autocmds
+    autocmd BufEnter * highlight OverLength ctermbg=red ctermfg=white guibg=#d6dfe6
+    autocmd BufEnter * match OverLength /\%81v.\+/
+  augroup END
+endif
 
 filetype plugin indent on    " required
