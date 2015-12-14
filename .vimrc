@@ -54,6 +54,10 @@ if has('gui_running')
   " Searching
   Bundle 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_cmd = 'CtrlPMixed'
+  let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+  if executable('ag')
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  endif
 
   Bundle 'rking/ag.vim'
 
