@@ -52,7 +52,7 @@ if has('gui_running')
   Bundle 'vim-scripts/vim-addon-mw-utils'
 
   " Searching
-  Bundle 'kien/ctrlp.vim'
+  Bundle 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_cmd = 'CtrlPMixed'
 
   Bundle 'rking/ag.vim'
