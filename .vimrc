@@ -53,6 +53,8 @@ if has('gui_running')
 
   " Searching
   Bundle 'ctrlpvim/ctrlp.vim'
+
+  " http://stackoverflow.com/questions/21346068/slow-performance-on-ctrlp-it-doesn't-work-to-ignore-some-folders
   let g:ctrlp_cmd = 'CtrlPMixed'
   let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
   if executable('ag')
