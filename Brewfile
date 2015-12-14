@@ -38,6 +38,7 @@ cask install joinme
 cask install gpgtools
 cask install insomniax
 cask install spectacle
+cask install alfred
 
 #https://developer.apple.com/downloads/index.action?name=for%20Xcode%20-#
 #TrackballWorks 1.2 for Mac

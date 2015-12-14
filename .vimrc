@@ -216,7 +216,9 @@ set number "Show line numbers"
 
 filetype plugin indent on "Automatic indentation based on filetype"
 let &t_Co=256 "256 colors in the terminal"
-set cursorline "Highlight the current line"
+if has('gui_running')
+  set cursorline "Highlight the current line"
+endif
 set mouse=a "Mouse support"
 set hidden "Allow switching from unsaved buffers"
 set confirm "Confirmation dialog instead of fail on unwritten buffers"
