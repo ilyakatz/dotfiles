@@ -72,3 +72,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export CLICOLOR=1
 source ~/.sshrc
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
