@@ -1,45 +1,43 @@
-install git
-install aspell
-install redis
-install rbenv
-install ctags
-install cmake
-install redis
-install mysql
-install rbenv
-install ruby-build
-install rbenv-gemset
-install ag
-install aspell
-install phantomjs
-install libxml2 libxslt
-install python
-install nginx
-install macvim
+brew "git"
+brew "aspell"
+brew "redis"
+brew "rbenv"
+brew "ctags"
+brew "cmake"
+brew "redis"
+brew "rbenv"
+brew "ruby-build"
+brew "rbenv-gemset"
+brew "ag"
+brew "aspell"
+brew "phantomjs"
+#brew "libxml2 libxslt"
+brew "python"
+brew "nginx"
+brew "macvim"
+brew "zsh"
+brew "zsh-completions"
+brew "nvm"
+brew "mysql"
+#brew 'brew-cask'
 
-tap 'caskroom/cask'
-install 'brew-cask'
+tap "caskroom/cask"
 
-# brew versions
-tap Homebrew/homebrew-versions
-
-cask install cyberduck
-cask install openoffice
-cask install viber
-cask install virtualbox
-cask install firefox
-cask install evernote
-cask install livereload
-cask install google-chrome
-cask install adium
-cask install flux
-cask install skype
-cask install joinme
-cask install gpgtools
-cask install insomniax
-cask install spectacle
-cask install alfred
-cask install linein
+cask "google-chrome"
+cask "visual-studio-code"
+cask "openoffice"
+cask "virtualbox"
+cask "firefox"
+cask "slack"
+#cask install livereload
+cask "flux"
+cask "skype"
+#cask install joinme
+#cask install gpgtools
+#cask install insomniax
+#cask install spectacle
+#cask install alfred
+#cask install linein
 
 #https://developer.apple.com/downloads/index.action?name=for%20Xcode%20-#
 #TrackballWorks 1.2 for Mac

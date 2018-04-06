@@ -1,3 +1,7 @@
+# Installation
+
+http://ethanschoonover.com/solarized
+
 **bold** indicates insert mode
 
 ### Ruby/Rails
