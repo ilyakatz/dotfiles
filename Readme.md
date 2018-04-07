@@ -2,6 +2,10 @@
 
 http://ethanschoonover.com/solarized
 
+Enable press and hold movement
+
+https://discussions.apple.com/thread/6058293?tstart=0
+
 **bold** indicates insert mode
 
 ### Ruby/Rails
