@@ -19,6 +19,9 @@ brew "zsh"
 brew "zsh-completions"
 brew "nvm"
 brew "mysql"
+brew "docker"
+brew "docker-compose"
+brew "docker-machine"
 #brew 'brew-cask'
 
 tap "caskroom/cask"
@@ -32,6 +35,7 @@ cask "slack"
 #cask install livereload
 cask "flux"
 cask "skype"
+cask "viscosity"
 #cask install joinme
 #cask install gpgtools
 #cask install insomniax
