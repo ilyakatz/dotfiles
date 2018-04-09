@@ -36,6 +36,7 @@ cask "slack"
 cask "flux"
 cask "skype"
 cask "viscosity"
+cask "fantastical"
 #cask install joinme
 #cask install gpgtools
 #cask install insomniax
