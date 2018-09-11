@@ -58,6 +58,7 @@ export PATH=$PATH:/usr/local/mysql/bin
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="./node_modules/.bin/:$PATH"
 
 export PATH=$PATH:/Applications/MacVim
 
@@ -75,3 +76,7 @@ source ~/.sshrc
 
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
