@@ -143,3 +143,13 @@ ds{ - delete surrounding {
 1. enter into column insert mode `shift+i`
 1. insert the text
 1. type `Esc`
+
+# Installation
+
+install git
+install homebrew
+brew bundle
+
+install oh-my-zsh
+
+find . -name ".*" -type f -exec cp -- "{}" ~/. \;
