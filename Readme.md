@@ -152,4 +152,6 @@ brew bundle
 
 install oh-my-zsh
 
+cp ~/.gitconfig /tmp/.gitconfig.backup
+
 find . -name ".*" -type f -exec cp -- "{}" ~/. \;
