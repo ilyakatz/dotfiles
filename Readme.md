@@ -153,3 +153,15 @@ brew bundle
 install oh-my-zsh
 
 find . -name ".*" -type f -exec cp -- "{}" ~/. \;
+
+# Ubuntu Packages
+
+sudo apt install apt-clone
+
+## Restore
+
+## Save
+
+```
+apt-clone clone .
+```
